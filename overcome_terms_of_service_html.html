@@ -1,219 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overcome Terms of Service</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Overcome</title>
   <style>
-    * { box-sizing: border-box; }
-    .site-nav {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 0 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    .site-nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 52px;
-    }
-    .site-nav a.brand {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 0.02em;
-    }
-    .site-nav a.brand:hover { color: #e0e0e0; }
-    .site-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-    }
-    .site-nav li a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .site-nav li a:hover { color: #fff; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0 20px 40px;
-      background: #f9f9f9;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f8f9fc;
     }
-    .container {
-      max-width: 900px;
-      margin: 20px auto 0;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    .wrapper { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    .doc-header {
+      text-align: center; padding: 40px 24px 32px;
+      background: linear-gradient(135deg, #1F4E79 0%, #2E74B5 100%);
+      border-radius: 12px; margin-bottom: 40px; color: #fff;
     }
-    h1, h2, h3 {
-      color: #111;
-    }
-    h1 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
-    }
-    table, th, td {
-      border: 1px solid #ddd;
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background: #f1f1f1;
-    }
-    blockquote {
-      border-left: 4px solid #ccc;
-      padding-left: 15px;
-      color: #555;
-      margin: 15px 0;
-    }
-    ul {
-      margin: 10px 0 20px 20px;
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
-      text-align: center;
+    .doc-header .app-name { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 10px; }
+    .doc-header h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .doc-header .meta { font-size: 13px; opacity: 0.75; }
+
+    .callout { background: #EBF3FB; border-left: 4px solid #2E74B5; border-radius: 6px; padding: 16px 20px; margin: 20px 0; font-size: 14px; color: #1F4E79; font-style: italic; line-height: 1.6; }
+    .callout.warning { background: #FDF3F3; border-left-color: #C0392B; color: #C0392B; font-style: normal; font-weight: 500; }
+
+    .section { background: #fff; border-radius: 10px; padding: 28px 32px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    h2 { font-size: 17px; font-weight: 700; color: #1F4E79; border-bottom: 2px solid #1F4E79; padding-bottom: 8px; margin-bottom: 16px; }
+    h3 { font-size: 15px; font-weight: 600; color: #2E74B5; margin: 20px 0 8px; }
+    p { font-size: 15px; color: #333; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    ol { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: #333; margin-bottom: 6px; line-height: 1.6; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .data-table th { background: #D6E4F0; color: #1F4E79; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid #c5d9ed; }
+    .data-table td { padding: 10px 14px; border: 1px solid #e8eef5; vertical-align: top; color: #333; line-height: 1.5; }
+    .data-table tr:nth-child(even) td { background: #f5f9fd; }
+    .data-table .col-left { width: 30%; font-weight: 500; color: #1F4E79; }
+
+    .guarantee-box { background: #F0FFF4; border: 1px solid #27AE60; border-radius: 8px; padding: 20px 24px; margin: 16px 0; }
+    .guarantee-box h4 { font-size: 14px; font-weight: 700; color: #1A6B3A; margin-bottom: 8px; }
+    .guarantee-box p { font-size: 14px; color: #2D6A4F; margin-bottom: 0; }
+
+    .deletion-box { background: #F0F7FF; border: 1px solid #2E74B5; border-radius: 8px; padding: 20px 24px; margin: 16px 0; }
+    .deletion-box h4 { font-size: 14px; font-weight: 700; color: #1F4E79; margin-bottom: 12px; }
+    .deletion-box ol { padding-left: 20px; }
+    .deletion-box li { font-size: 14px; color: #333; margin-bottom: 6px; }
+
+    .doc-footer { text-align: center; padding: 24px; font-size: 13px; color: #888; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+    a { color: #2E74B5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { color: #1a1a2e; }
+
+    @media (max-width: 600px) {
+      .section { padding: 20px 16px; }
+      .doc-header h1 { font-size: 24px; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
     }
   </style>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Main">
-    <div class="site-nav-inner">
-      <a class="brand" href="index.html">Overcome</a>
-      <ul>
-        <li><a href="privacy_policy.html">Privacy Policy</a></li>
-        <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="container">
+<div class="wrapper">
 
+  <div class="doc-header">
+    <div class="app-name">Overcome: Dopamine Reset for Men</div>
     <h1>Terms of Service</h1>
-    <h2>Overcome: Dopamine Reset for Men</h2>
+    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 20 April 2026</div>
+  </div>
 
-    <p><strong>Effective Date:</strong> 20 March 2026<br>
-    <strong>Last Updated:</strong> 16 April 2026</p>
+  <div class="callout">
+    Please read these Terms of Service carefully before using Overcome. By creating an account or using the app, you confirm that you have read, understood, and agreed to be bound by these terms. If you do not agree, do not use the app.
+  </div>
 
-    <blockquote>
-      Please read these Terms of Service carefully before using Overcome. By creating an account or using the app, you agree to these terms.
-    </blockquote>
-
+  <!-- 1 -->
+  <div class="section">
     <h2>1. Parties to This Agreement</h2>
-    <p>This agreement is between you (the user) and Overcome, operated by independent developers in Bengaluru, India.</p>
+    <p>This Terms of Service agreement is between:</p>
+    <ul>
+      <li><strong>You</strong> — the individual accessing or using the Overcome application ("User", "you", or "your"), and</li>
+      <li><strong>Us</strong> — Overcome, a habit-building mobile application developed and operated by its co-founders as independent developers based in Bengaluru, Karnataka, India.</li>
+    </ul>
+    <p>By downloading, installing, or using Overcome on Android (Google Play) or iOS (App Store), you enter into a legally binding agreement under the terms set out below.</p>
+    <p>You must be at least <strong>18 years of age</strong> to use Overcome. By using the app, you confirm that you meet this requirement.</p>
+  </div>
 
+  <!-- 2 -->
+  <div class="section">
     <h2>2. What Overcome Is — and What It Is Not</h2>
-    <h3>What It Is</h3>
+    <h3>2.1 What Overcome Is</h3>
+    <p>Overcome is a habit-building and behavioural change mobile application. It provides:</p>
     <ul>
-      <li>90-day habit-building challenge</li>
-      <li>Clarity Score tracking</li>
-      <li>Daily check-ins and streak tracking</li>
+      <li>A structured 90-day daily challenge programme to help users reduce compulsive digital habits and reset dopamine sensitivity</li>
+      <li>A three-tier daily challenge system with personalised weekly tasks</li>
+      <li>A Clarity Score — a composite progress metric calculated from streak length, challenge completion, lifestyle habits, and consistency</li>
+      <li>A streak tracker and relapse logging tool</li>
+      <li>An achievement badge system with 34 science-backed badges</li>
+      <li>Daily wellbeing check-in functionality</li>
+      <li>Progress tracking and visualisation tools</li>
     </ul>
+    <h3>2.2 What Overcome Is Not</h3>
+    <div class="callout warning">
+      Overcome is not a medical device, clinical treatment, licensed therapy service, counselling platform, or substitute for professional mental health care. Nothing in the app constitutes medical advice, psychological treatment, or a clinical intervention of any kind. Overcome is not affiliated with any medical or clinical institution.
+    </div>
+    <p>Overcome is also not:</p>
+    <ul>
+      <li>A content blocker or parental control tool</li>
+      <li>A pornography filtering or monitoring service</li>
+      <li>A crisis intervention or emergency mental health service</li>
+      <li>A guaranteed cure or treatment for any condition, disorder, or addiction</li>
+    </ul>
+  </div>
 
-    <h3>What It Is Not</h3>
-    <blockquote>
-      Overcome is not a medical device or therapy service.
-    </blockquote>
-
+  <!-- 3 -->
+  <div class="section">
     <h2>3. Eligibility and Account</h2>
+    <h3>3.1 Age Requirement</h3>
+    <p>You must be 18 years of age or older to create an account. By registering, you confirm this. We reserve the right to terminate accounts found to belong to users under 18 without notice or refund.</p>
+    <h3>3.2 Account Responsibility</h3>
+    <p>You agree to:</p>
     <ul>
-      <li>Must be 18+ years old</li>
-      <li>You are responsible for account security</li>
+      <li>Provide accurate information when creating your account</li>
+      <li>Keep your password secure and not share it with others</li>
+      <li>Notify us immediately at <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> if you suspect unauthorised account access</li>
+      <li>Accept responsibility for all activity under your account</li>
     </ul>
+    <p>Account authentication is managed by Descope, a third-party identity platform. Your credentials are processed and stored securely by Descope in accordance with their privacy policy at <a href="https://www.descope.com/privacy" target="_blank">descope.com/privacy</a>.</p>
+  </div>
 
+  <!-- 4 -->
+  <div class="section">
     <h2>4. Subscriptions and Billing</h2>
-    <table>
-      <tr>
-        <th>Plan</th>
-        <th>Duration</th>
-        <th>Guarantee Window</th>
-      </tr>
-      <tr>
-        <td>90-Day Reset</td>
-        <td>90 days</td>
-        <td>90 days</td>
-      </tr>
-      <tr>
-        <td>180-Day Reset</td>
-        <td>180 days</td>
-        <td>180 days</td>
-      </tr>
+    <h3>4.1 Available Plans</h3>
+    <p>Overcome offers two subscription plans. Both include the Cashback Guarantee described in Section 5, with different guarantee structures. Read Section 5 carefully before choosing.</p>
+    <table class="data-table">
+      <tr><th class="col-left">Plan</th><th>Duration</th><th>Guarantee Window</th><th>Auto-Renewal</th></tr>
+      <tr><td class="col-left"><strong>The 90-Day Reset</strong></td><td>90 days (13 weeks)</td><td>Full 90 days</td><td>Every 90 days</td></tr>
+      <tr><td class="col-left"><strong>The 180-Day Full Reset</strong></td><td>180 days (26 weeks)</td><td>Full 180 days</td><td>Annually (365 days)</td></tr>
     </table>
+    <p>All prices are in Indian Rupees (INR) inclusive of applicable taxes, displayed in the app at time of purchase. Prices may change but will not affect active periods already paid for.</p>
 
-    <h2>5. Cashback Guarantee</h2>
-    <p>You may receive 90% cashback if all required weeks are completed and no improvement is observed.</p>
+    <h3>4.2 Billing and Auto-Renewal</h3>
+    <p>Subscriptions are billed in advance. Unless cancelled before renewal, your subscription auto-renews at the then-current price. All billing is managed by Google Play (Android) or Apple App Store (iOS). Overcome does not store payment card details or financial credentials.</p>
 
-    <h2>6. User Obligations</h2>
+    <h3>4.3 Cancellation</h3>
+    <p>Cancel anytime through your app store subscription settings:</p>
     <ul>
-      <li>Provide accurate information</li>
-      <li>Do not manipulate data</li>
-      <li>Use lawfully</li>
+      <li><strong>Android:</strong> Google Play Store &gt; Account &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
+      <li><strong>iOS:</strong> Settings &gt; Apple ID &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
     </ul>
+    <p>Cancellation prevents future renewals but does not entitle you to a refund for the current period, except as provided in Section 5.</p>
 
-    <h2>7. Prohibited Uses</h2>
-    <ul>
-      <li>No hacking or scraping</li>
-      <li>No impersonation</li>
-    </ul>
+    <h3>4.4 Failed Payments</h3>
+    <p>If a payment fails, access may be suspended until payment is processed. We are not responsible for loss of streak data or programme continuity due to payment failure.</p>
+  </div>
 
-    <h2>8. Intellectual Property</h2>
-    <p>All app content belongs to Overcome.</p>
-
-    <h2>9. Medical Disclaimer</h2>
-    <blockquote>
-      This app is not a substitute for professional healthcare.
-    </blockquote>
-
-    <h2>10. Limitation of Liability</h2>
-    <p>We are not liable for damages or outcomes from app usage.</p>
-
-    <h2>11. Service Disclaimer</h2>
-    <p>App is provided "as is" without guarantees.</p>
-
-    <h2>12. Community Features</h2>
-    <p>Future feature, not currently available.</p>
-
-    <h2>13. Termination</h2>
-    <p>We may suspend or terminate accounts for violations.</p>
-
-    <h2>14. Changes to Terms</h2>
-    <p>We may update terms with notice.</p>
-
-    <h2>15. Governing Law</h2>
-    <p>Governed by Indian law. Jurisdiction: Bengaluru courts.</p>
-
-    <h2>16. Contact</h2>
-    <p>Email: overcomeapp0@gmail.com</p>
-
-    <div class="footer">
-      Overcome | Bengaluru, India | 2026
+  <!-- 5 -->
+  <div class="section">
+    <h2>5. The Overcome Cashback Guarantee</h2>
+    <div class="callout">
+      The Cashback Guarantee is available on both plans. It is a performance-based cashback — not a no-questions-asked refund. The guarantee structure differs between plans. Read this section carefully before purchasing.
     </div>
 
+    <h3>5.1 How the Guarantee Works</h3>
+    <p>If you complete all required challenge weeks across your guarantee period and do not experience any meaningful improvement, you may claim <strong>90% of the amount you paid</strong> back. The remaining 10% is non-refundable and covers platform fees and programme infrastructure costs.</p>
+
+    <h3>5.2 What Counts as a Completed Week</h3>
+    <p>A <strong>"completed week"</strong> is defined as a week in which every assigned challenge has met its individual completion threshold as recorded automatically by the app. Different challenges carry different thresholds — some require 3 out of 7 days, some 4 out of 7, and some 5 out of 7. These thresholds are displayed in the app for each challenge.</p>
+    <p>Tier 3 surprise challenges are excluded from the weekly completion calculation. Only Tier 1 and Tier 2 challenges count toward guarantee eligibility. Tier 3 challenges disappear on the day they appear and are not tracked for completion purposes.</p>
+    <p>Completion is determined solely by in-app logs. No external proof is required or accepted. Completion data is immutable — logs cannot be retroactively edited by users or administrators.</p>
+
+    <h3>5.3 Completion Requirements by Plan</h3>
+    <table class="data-table">
+      <tr><th class="col-left">Plan</th><th>Guarantee Period</th><th>Weeks Required</th></tr>
+      <tr><td class="col-left">The 90-Day Reset</td><td>90 days</td><td>All 13 of 13 weeks</td></tr>
+      <tr><td class="col-left">The 180-Day Full Reset</td><td>180 days</td><td>All 26 of 26 weeks</td></tr>
+    </table>
+    <p>All weeks in the guarantee period must be completed. A single incomplete week disqualifies the claim.</p>
+
+    <h3>5.4 Cashback Amounts</h3>
+    <p>The cashback is 90% of the subscription price paid at time of purchase, regardless of promotional pricing. The 10% retained is non-refundable under all circumstances.</p>
+
+    <h3>5.5 Claim Process</h3>
+    <ol>
+      <li>Navigate to your <strong>Profile Page</strong> within the app.</li>
+      <li>Tap the <strong>"Claim Cashback"</strong> button — visible only when your guarantee period has ended, all required weeks are complete, and you are within the claim window.</li>
+      <li>The button opens a pre-filled email to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>. Do not modify the subject line or body.</li>
+      <li>Send the email.</li>
+      <li>The Overcome team will verify completion data within <strong>2 business days</strong>.</li>
+      <li>If approved, cashback is processed within <strong>7 to 10 business days</strong> via your original payment method.</li>
+    </ol>
+
+    <h3>5.6 Claim Windows</h3>
+    <table class="data-table">
+      <tr><th class="col-left">Plan</th><th>Guarantee Period Ends</th><th>Claim Window</th></tr>
+      <tr><td class="col-left">The 90-Day Reset</td><td>Day 90</td><td>Within 14 days of day 90</td></tr>
+      <tr><td class="col-left">The 180-Day Full Reset</td><td>Day 180</td><td>Within 14 days of day 180</td></tr>
+    </table>
+    <p>Claims submitted outside these windows are automatically disqualified. No exceptions for late submissions regardless of reason.</p>
+
+    <h3>5.7 Disqualifying Conditions</h3>
+    <p>A claim will be rejected if any of the following apply:</p>
+    <ul>
+      <li>All required weeks not completed (13/13 for 90-Day Reset, 26/26 for 180-Day Full Reset)</li>
+      <li>Claim submitted outside the 14-day claim window</li>
+      <li>Falsified, manipulated, or artificially inflated challenge completion data</li>
+      <li>Multiple accounts created to circumvent the guarantee</li>
+      <li>User in breach of any ToS provision at time of claim</li>
+      <li>Chargeback already filed with Google Play or Apple App Store for the same period</li>
+      <li>More than one claim submitted per subscription period</li>
+    </ul>
+
+    <h3>5.8 Guarantee Limitations</h3>
+    <p>The guarantee applies only to the current active subscription period. It does not apply to cancelled subscriptions where the plan did not run to its full end date. The guarantee is not transferable.</p>
+    <div class="callout">
+      The Cashback Guarantee is not an unconditional money-back guarantee. It is a reward for genuine, sustained engagement. Users who complete every required week and still feel no improvement are the intended beneficiaries. Users who did not fully engage are not eligible.
+    </div>
   </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2>6. User Obligations</h2>
+    <p>By using Overcome, you agree to the following:</p>
+    <ul>
+      <li>You are 18 years of age or older</li>
+      <li>You will provide accurate information at account creation and during onboarding</li>
+      <li>You will not create multiple accounts for any purpose, including circumventing the Cashback Guarantee</li>
+      <li>You will not falsify, manipulate, or artificially inflate your challenge completion data</li>
+      <li>You will not use the app for any unlawful purpose</li>
+      <li>You will not attempt to reverse engineer, decompile, or tamper with the app</li>
+      <li>You will maintain the confidentiality of your account credentials</li>
+      <li>You understand Overcome is a habit-building tool and not a medical service</li>
+      <li>You will not hold Overcome responsible for outcomes resulting from your use or non-use of the app</li>
+      <li>You will not use the app if you are in a mental health crisis — contact a qualified mental health professional immediately in such situations</li>
+    </ul>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2>7. Prohibited Uses</h2>
+    <p>You may not use Overcome for:</p>
+    <ul>
+      <li>Any unlawful, fraudulent, or deceptive activity</li>
+      <li>Harassment, abuse, or harm of any individual</li>
+      <li>Impersonating any person or entity</li>
+      <li>Attempting to gain unauthorised access to the app, its servers, or databases</li>
+      <li>Introducing malware, viruses, or harmful code</li>
+      <li>Scraping or data mining the app by automated means</li>
+      <li>Reproducing, distributing, or commercialising app content without written permission</li>
+      <li>Using the app in any way that damages or impairs its functionality</li>
+    </ul>
+    <p>We reserve the right to suspend or permanently terminate accounts engaged in prohibited uses, without notice and without refund.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2>8. Intellectual Property</h2>
+    <p>All content within Overcome — including the Clarity Score system, challenge structures, badge designs, programme methodology, written content, visual design, and brand identity — is the intellectual property of Overcome and its co-founders.</p>
+    <p>You are granted a limited, non-exclusive, non-transferable licence to use the app for personal, non-commercial use during your active subscription. This licence does not permit copying, reproducing, distributing, or modifying any app content.</p>
+    <p>Nothing in this Agreement transfers any intellectual property rights to you.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2>9. Medical Disclaimer</h2>
+    <div class="callout warning">
+      Overcome is a habit-building tool. It is not a medical device, clinical treatment, therapy service, or substitute for professional mental health care. Nothing in the app constitutes medical advice, psychological treatment, or a clinical diagnosis. Overcome does not diagnose, treat, cure, or prevent any disorder, disease, or medical condition. Users experiencing serious mental health conditions — including depression, anxiety disorders, or compulsive disorders requiring clinical intervention — should consult a qualified healthcare professional. Do not delay seeking professional help because of anything you have read or experienced in this app.
+    </div>
+    <p>The programme content in Overcome is based on general principles of habit formation and behavioural psychology. It is educational and motivational in nature. Individual results vary significantly and are not guaranteed.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2>10. Limitation of Liability</h2>
+    <h3>10.1 No Guarantee of Results</h3>
+    <p>Overcome does not guarantee any specific outcome or improvement. Effectiveness varies between individuals and depends on factors outside our control.</p>
+
+    <h3>10.2 Limitation of Damages</h3>
+    <p>To the maximum extent permitted by applicable law, Overcome and its co-founders shall not be liable for:</p>
+    <ul>
+      <li>Any indirect, incidental, special, consequential, or punitive damages from use of the app</li>
+      <li>Any loss of data, streaks, or programme history due to technical failures or subscription lapse</li>
+      <li>Any physical, psychological, or emotional outcomes resulting from following the programme</li>
+      <li>Any third-party actions, including payment processing errors by Google Play, Apple App Store, RevenueCat, or Descope</li>
+      <li>Any interruption, suspension, or discontinuation of the app or its features</li>
+    </ul>
+
+    <h3>10.3 Maximum Liability</h3>
+    <p>In any circumstance where Overcome is found liable, our total liability shall not exceed the amount you paid for your current subscription period.</p>
+
+    <h3>10.4 Indemnification</h3>
+    <p>You agree to indemnify and hold harmless Overcome and its co-founders from any claims, damages, or expenses arising from your violation of these Terms or misuse of the app.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2>11. Service Disclaimers</h2>
+    <p>Overcome is provided on an "as is" and "as available" basis. We make no warranties regarding the app's reliability, accuracy, availability, or fitness for a particular purpose. We reserve the right to modify, suspend, or discontinue any feature at any time with reasonable notice where possible.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2>12. Community Features</h2>
+    <p>A community forum feature is planned for a future phase of Overcome and is not available at the time these Terms of Service take effect.</p>
+    <p>When introduced, community features will be subject to additional guidelines and moderation terms communicated before those features go live. Participation will be subject to those additional terms alongside this Agreement.</p>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <h2>13. Account Deletion and Termination</h2>
+    <h3>13.1 Deletion by You</h3>
+    <p>You may request deletion of your account at any time:</p>
+    <div class="deletion-box">
+      <h4>How to request account deletion:</h4>
+      <ol>
+        <li>Tap <strong>"Request Account Deletion"</strong> on your Profile Page. This opens a pre-filled email to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>.</li>
+        <li>Send the email without modifying the subject line.</li>
+        <li>We will confirm receipt within 48 hours and permanently delete your account within 30 days.</li>
+      </ol>
+    </div>
+    <p>Alternatively, email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> directly with subject line <strong>"Data Deletion Request"</strong>. Deletion of your account terminates this Agreement. For full details of what is deleted and retained, refer to the Privacy Policy Section 5.3.</p>
+
+    <h3>13.2 Termination by Us</h3>
+    <p>We may suspend or terminate your account if you violate these Terms, if we believe your use is fraudulent or harmful, or if required by law. No refund will be issued for termination due to a Terms violation. For termination unrelated to your conduct, a pro-rata refund of your remaining period will be provided where possible.</p>
+
+    <h3>13.3 Effect of Termination</h3>
+    <p>Upon termination, your licence ends immediately, access is revoked, and your data is handled per our Privacy Policy.</p>
+  </div>
+
+  <!-- 14 -->
+  <div class="section">
+    <h2>14. Changes to These Terms</h2>
+    <ul>
+      <li>The "Last Updated" date will be revised on any changes.</li>
+      <li>You will be notified via in-app notification or email at least 7 days before material changes take effect.</li>
+      <li>For changes materially affecting your rights, we will request fresh acceptance.</li>
+    </ul>
+    <p>Continued use after changes take effect constitutes acceptance. If you disagree, cancel before changes take effect.</p>
+  </div>
+
+  <!-- 15 -->
+  <div class="section">
+    <h2>15. Governing Law and Dispute Resolution</h2>
+    <h3>15.1 Governing Law</h3>
+    <p>These Terms are governed by the laws of India.</p>
+
+    <h3>15.2 Informal Resolution</h3>
+    <p>Before any formal dispute, contact us at <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with a written description of your complaint. We will make reasonable efforts to resolve it within 30 days.</p>
+
+    <h3>15.3 Jurisdiction</h3>
+    <p>Unresolved disputes are subject to the exclusive jurisdiction of courts in <strong>Bengaluru, Karnataka, India</strong>.</p>
+  </div>
+
+  <!-- 16 -->
+  <div class="section">
+    <h2>16. Contact and Dispute Queries</h2>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a></li>
+      <li><strong>Named contact for disputes:</strong> Digvijay Prashant Bhosale</li>
+      <li><strong>General queries:</strong> subject line "ToS Query"</li>
+      <li><strong>Disputes:</strong> subject line "Dispute — [brief description]"</li>
+      <li><strong>Cashback claims:</strong> initiated via the in-app Claim button on your Profile Page</li>
+      <li><strong>Response time:</strong> within 5 business days for general queries, within 2 business days for cashback claim verification</li>
+    </ul>
+  </div>
+
+  <div class="doc-footer">
+    Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
+    <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
+    Bengaluru, Karnataka, India &nbsp;|&nbsp;
+    Effective 20 March 2026
+  </div>
+
+</div>
 </body>
 </html>
