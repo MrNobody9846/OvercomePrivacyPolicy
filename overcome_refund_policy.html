@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refund Policy — Overcome</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f8f9fc;
+    }
+    .wrapper { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    .doc-header {
+      text-align: center; padding: 40px 24px 32px;
+      background: linear-gradient(135deg, #1F4E79 0%, #2E74B5 100%);
+      border-radius: 12px; margin-bottom: 40px; color: #fff;
+    }
+    .doc-header .app-name { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 10px; }
+    .doc-header h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .doc-header .meta { font-size: 13px; opacity: 0.75; }
+
+    .callout { background: #EBF3FB; border-left: 4px solid #2E74B5; border-radius: 6px; padding: 16px 20px; margin: 20px 0; font-size: 14px; color: #1F4E79; font-style: italic; line-height: 1.6; }
+    .callout.warning { background: #FDF3F3; border-left-color: #C0392B; color: #C0392B; font-style: normal; }
+    .callout.green { background: #F0FFF4; border-left-color: #27AE60; color: #1A6B3A; font-style: normal; }
+
+    .section { background: #fff; border-radius: 10px; padding: 28px 32px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    h2 { font-size: 17px; font-weight: 700; color: #1F4E79; border-bottom: 2px solid #1F4E79; padding-bottom: 8px; margin-bottom: 16px; }
+    h3 { font-size: 15px; font-weight: 600; color: #2E74B5; margin: 20px 0 8px; }
+    p { font-size: 15px; color: #333; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    ol { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: #333; margin-bottom: 6px; line-height: 1.6; }
+
+    .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .plan-card { border-radius: 10px; padding: 20px; border: 1px solid #e0e8f4; }
+    .plan-card.primary { background: #EBF3FB; border-color: #2E74B5; }
+    .plan-card.secondary { background: #F5F0FF; border-color: #8E44AD; }
+    .plan-card .plan-name { font-size: 15px; font-weight: 700; color: #1F4E79; margin-bottom: 12px; }
+    .plan-card.secondary .plan-name { color: #6C3483; }
+    .plan-card .plan-row { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+    .plan-card .plan-row .label { color: #666; }
+    .plan-card .plan-row .value { font-weight: 600; color: #1a1a2e; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .data-table th { background: #D6E4F0; color: #1F4E79; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid #c5d9ed; }
+    .data-table td { padding: 10px 14px; border: 1px solid #e8eef5; vertical-align: top; color: #333; line-height: 1.5; }
+    .data-table tr:nth-child(even) td { background: #f5f9fd; }
+    .data-table .col-left { width: 30%; font-weight: 500; color: #1F4E79; }
+
+    .step-list { counter-reset: steps; list-style: none; padding-left: 0; }
+    .step-list li { counter-increment: steps; padding: 12px 16px 12px 52px; position: relative; background: #f8f9fc; border-radius: 8px; margin-bottom: 8px; font-size: 14px; color: #333; }
+    .step-list li::before { content: counter(steps); position: absolute; left: 14px; top: 50%; transform: translateY(-50%); background: #2E74B5; color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+
+    .disqualify-list { list-style: none; padding-left: 0; }
+    .disqualify-list li { padding: 10px 14px 10px 44px; position: relative; border-radius: 6px; margin-bottom: 6px; font-size: 14px; color: #333; background: #FDF3F3; }
+    .disqualify-list li::before { content: "✕"; position: absolute; left: 14px; color: #C0392B; font-weight: 700; font-size: 14px; }
+
+    .doc-footer { text-align: center; padding: 24px; font-size: 13px; color: #888; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+    a { color: #2E74B5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { color: #1a1a2e; }
+
+    @media (max-width: 600px) {
+      .section { padding: 20px 16px; }
+      .doc-header h1 { font-size: 24px; }
+      .plan-grid { grid-template-columns: 1fr; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="doc-header">
+    <div class="app-name">Overcome: Dopamine Reset for Men</div>
+    <h1>Refund Policy</h1>
+    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 20 April 2026</div>
+  </div>
+
+  <div class="callout green">
+    Overcome offers a performance-based 90% Cashback Guarantee on both subscription plans. This page explains exactly how it works, what qualifies, and how to claim. Read it before you purchase — we want you to know exactly what you're signing up for.
+  </div>
+
+  <!-- 1. Our Philosophy -->
+  <div class="section">
+    <h2>1. Our Refund Philosophy</h2>
+    <p>We don't offer unconditional refunds. What we offer is better: a guarantee that is tied to genuine effort.</p>
+    <p>If you show up every week, complete your challenges, and still feel no improvement after the full programme — we'll give you 90% of your money back. No awkward emails, no hoops to jump through beyond what's tracked automatically in the app.</p>
+    <p>The 10% we retain covers platform fees charged by Google Play and Apple App Store, and the cost of running the programme infrastructure. This is standard across performance guarantees and is non-negotiable.</p>
+    <div class="callout">
+      The guarantee exists because we believe in the programme. Users who genuinely complete every required week almost never feel no improvement. If you do, we don't deserve your money.
+    </div>
+  </div>
+
+  <!-- 2. Plans -->
+  <div class="section">
+    <h2>2. Which Plans Include the Guarantee</h2>
+    <p>The Cashback Guarantee is available on both Overcome subscription plans:</p>
+
+    <div class="plan-grid">
+      <div class="plan-card primary">
+        <div class="plan-name">The 90-Day Reset</div>
+        <div class="plan-row"><span class="label">Duration</span><span class="value">90 days (13 weeks)</span></div>
+        <div class="plan-row"><span class="label">Guarantee window</span><span class="value">Full 90 days</span></div>
+        <div class="plan-row"><span class="label">Weeks required</span><span class="value">All 13 of 13</span></div>
+        <div class="plan-row"><span class="label">Claim window</span><span class="value">14 days after day 90</span></div>
+        <div class="plan-row"><span class="label">Cashback</span><span class="value">90% of amount paid</span></div>
+        <div class="plan-row"><span class="label">Auto-renewal</span><span class="value">Every 90 days</span></div>
+      </div>
+      <div class="plan-card secondary">
+        <div class="plan-name">The 180-Day Full Reset</div>
+        <div class="plan-row"><span class="label">Duration</span><span class="value">180 days (26 weeks) (6 months)</span></div>
+        <div class="plan-row"><span class="label">Guarantee window</span><span class="value">Full 6 months</span></div>
+        <div class="plan-row"><span class="label">Weeks required</span><span class="value">All 26 of 26</span></div>
+        <div class="plan-row"><span class="label">Claim window</span><span class="value">14 days after day 180</span></div>
+        <div class="plan-row"><span class="label">Cashback</span><span class="value">90% of amount paid</span></div>
+        <div class="plan-row"><span class="label">Auto-renewal</span><span class="value">Half yearly (every 6 months)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Completed Week -->
+  <div class="section">
+    <h2>3. What Counts as a Completed Week</h2>
+    <p>A <strong>"completed week"</strong> is a week in which every assigned challenge has met its individual daily threshold as automatically recorded in the app.</p>
+    <p>Different challenges have different thresholds — some require completion on <strong>3 out of 7 days</strong>, some on <strong>4 out of 7</strong>, and some on <strong>5 out of 7</strong>. The threshold for each challenge is displayed clearly within the app.</p>
+    <p>A week is only complete when <strong>every challenge</strong> in that week has individually met its threshold. Partially completing some challenges does not count as a completed week.</p>
+    <p>Tier 3 surprise challenges are excluded from the weekly completion calculation. Only Tier 1 and Tier 2 challenges count toward guarantee eligibility. Tier 3 challenges disappear on the day they appear and are not tracked for completion purposes.</p>
+    <div class="callout warning">
+      Completion is determined solely by in-app logs. No screenshots, external records, or manual submissions are accepted. Completion logs are immutable — they cannot be retroactively edited by users or administrators.
+    </div>
+  </div>
+
+  <!-- 4. How to Claim -->
+  <div class="section">
+    <h2>4. How to Claim Your Cashback</h2>
+    <p>The claim process is straightforward. The app handles eligibility verification automatically — you do not need to gather proof or fill out a form.</p>
+    <ol class="step-list">
+      <li>Open the app and navigate to your <strong>Profile Page</strong>.</li>
+      <li>Tap the <strong>"Claim Cashback"</strong> button. This button only appears when your guarantee period has ended, all required weeks are marked complete, and you are within the 14-day claim window.</li>
+      <li>The button opens a <strong>pre-filled email</strong> addressed to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>. Do not modify the subject line or body of the email.</li>
+      <li>Send the email.</li>
+      <li>The Overcome team will <strong>verify your completion data</strong> against backend records within 2 business days.</li>
+      <li>If approved, your <strong>cashback is processed within 7 to 10 business days</strong> via your original payment method (Google Play or Apple App Store).</li>
+    </ol>
+    <div class="callout">
+      If you do not see the "Claim Cashback" button after your programme ends, it means either the completion threshold has not been met or the claim window has passed. Email us at overcomeapp0@gmail.com if you believe this is an error.
+    </div>
+  </div>
+
+  <!-- 5. Disqualifying Conditions -->
+  <div class="section">
+    <h2>5. What Disqualifies a Claim</h2>
+    <p>A cashback claim will be rejected if any of the following conditions apply:</p>
+    <ul class="disqualify-list">
+      <li>All required weeks were not completed — 13/13 for The 90-Day Reset, 26/26 for The 180-Day Full Reset</li>
+      <li>The claim was submitted outside the 14-day claim window after the guarantee period ended</li>
+      <li>Challenge completion data was found to be falsified, manipulated, or artificially inflated</li>
+      <li>Multiple accounts were created to circumvent the guarantee</li>
+      <li>The user was in breach of the Terms of Service at the time of the claim</li>
+      <li>A chargeback was already filed with Google Play or Apple App Store for the same subscription period</li>
+      <li>More than one claim was submitted in the same subscription period</li>
+      <li>The subscription was cancelled before the plan ran to its full end date</li>
+    </ul>
+  </div>
+
+  <!-- 6. What Is Not Covered -->
+  <div class="section">
+    <h2>6. What Is Not Covered</h2>
+    <p>The following are not eligible for a refund or cashback under any circumstances:</p>
+    <ul>
+      <li>Subscriptions cancelled mid-period where the plan did not run to its full end date</li>
+      <li>The 10% retained from any approved cashback claim — this is non-refundable</li>
+      <li>Subscription periods where a chargeback has already been initiated via Google Play or Apple App Store</li>
+      <li>Requests made after the 14-day claim window has closed, regardless of reason</li>
+      <li>Claims based on dissatisfaction with individual features rather than overall programme results</li>
+    </ul>
+    <div class="callout warning">
+      Overcome does not offer no-questions-asked refunds. If you are unsure about committing to a plan, we recommend starting with The 90-Day Reset, which has a shorter commitment period and the same guarantee terms.
+    </div>
+  </div>
+
+  <!-- 7. Cancellation -->
+  <div class="section">
+    <h2>7. Cancellation</h2>
+    <p>You may cancel your subscription at any time through your app store subscription settings. Cancellation prevents future auto-renewal but does not entitle you to a refund for the current billing period.</p>
+    <ul>
+      <li><strong>Android:</strong> Google Play Store &gt; Account &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
+      <li><strong>iOS:</strong> Settings &gt; Apple ID &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
+    </ul>
+    <p>Cancelling your subscription also disqualifies you from the Cashback Guarantee for that subscription period, as the plan must run to its full end date to be eligible.</p>
+  </div>
+
+  <!-- 8. Contact -->
+  <div class="section">
+    <h2>8. Questions and Disputes</h2>
+    <p>If you have any questions about this Refund Policy, believe your claim was incorrectly rejected, or need help with the claim process:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a></li>
+      <li><strong>Named contact:</strong> Digvijay Prashant Bhosale</li>
+      <li><strong>Subject line for refund queries:</strong> "Refund Query — [your registered email]"</li>
+      <li><strong>Subject line for disputed rejections:</strong> "Disputed Claim — [your registered email]"</li>
+      <li><strong>Response time:</strong> within 2 business days for cashback queries, within 5 business days for disputes</li>
+    </ul>
+    <p>This Refund Policy is governed by the laws of India. Disputes are subject to the jurisdiction of courts in Bengaluru, Karnataka, India. For the complete terms governing your use of Overcome, refer to our <a href="tos.html">Terms of Service</a> and <a href="privacy_policy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <div class="doc-footer">
+    Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
+    <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
+    Bengaluru, Karnataka, India &nbsp;|&nbsp;
+    Effective 20 March 2026
+  </div>
+
+</div>
+</body>
+</html>
