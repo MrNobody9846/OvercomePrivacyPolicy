@@ -1,139 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overcome — Legal &amp; policies</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Documents — Overcome</title>
   <style>
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      color: #111;
-      background: #f5f5f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f8f9fc;
+      min-height: 100vh; display: flex; flex-direction: column;
     }
-    .site-nav {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 0 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+    .wrapper { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; flex: 1; }
+
+    .doc-header {
+      text-align: center; padding: 48px 24px 40px;
+      background: linear-gradient(135deg, #1F4E79 0%, #2E74B5 100%);
+      border-radius: 14px; margin-bottom: 48px; color: #fff;
     }
-    .site-nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 52px;
+    .app-icon {
+      width: 72px; height: 72px; background: rgba(255,255,255,0.15);
+      border-radius: 18px; margin: 0 auto 20px; display: flex;
+      align-items: center; justify-content: center; font-size: 36px;
     }
-    .site-nav a.brand {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 0.02em;
+    .doc-header .app-name { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 8px; }
+    .doc-header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .doc-header .tagline { font-size: 15px; opacity: 0.8; max-width: 400px; margin: 0 auto; }
+
+    .intro { text-align: center; margin-bottom: 36px; }
+    .intro p { font-size: 15px; color: #555; max-width: 520px; margin: 0 auto; }
+
+    .doc-grid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+
+    .doc-card {
+      background: #fff; border-radius: 12px; padding: 20px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #e8eef5;
+      display: flex; align-items: center; gap: 18px;
+      text-decoration: none; color: inherit;
+      transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
     }
-    .site-nav a.brand:hover {
-      color: #e0e0e0;
+    .doc-card:hover { box-shadow: 0 4px 16px rgba(31,78,121,0.12); transform: translateY(-2px); border-color: #2E74B5; }
+
+    .doc-icon {
+      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 22px;
     }
-    .site-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
+    .doc-icon.blue { background: #EBF3FB; }
+    .doc-icon.green { background: #F0FFF4; }
+    .doc-icon.amber { background: #FFF8E7; }
+    .doc-icon.red { background: #FDF3F3; }
+
+    .doc-info { flex: 1; }
+    .doc-info .doc-title { font-size: 16px; font-weight: 700; color: #1F4E79; margin-bottom: 3px; }
+    .doc-info .doc-desc { font-size: 13px; color: #666; line-height: 1.5; }
+
+    .doc-arrow { color: #2E74B5; font-size: 20px; flex-shrink: 0; opacity: 0.5; }
+    .doc-card:hover .doc-arrow { opacity: 1; }
+
+    .contact-box {
+      background: #fff; border-radius: 12px; padding: 24px 28px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #e8eef5;
+      text-align: center;
     }
-    .site-nav li a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
+    .contact-box h2 { font-size: 16px; font-weight: 700; color: #1F4E79; margin-bottom: 8px; }
+    .contact-box p { font-size: 14px; color: #555; margin-bottom: 14px; }
+    .contact-email {
+      display: inline-block; background: #EBF3FB; color: #1F4E79;
+      font-weight: 700; font-size: 15px; padding: 10px 24px;
+      border-radius: 8px; text-decoration: none;
     }
-    .site-nav li a:hover {
-      color: #fff;
+    .contact-email:hover { background: #D6E4F0; }
+    .contact-officer { font-size: 13px; color: #888; margin-top: 10px; }
+
+    .doc-footer {
+      text-align: center; padding: 24px;
+      font-size: 13px; color: #aaa;
+      border-top: 1px solid #e8eef5; margin-top: 48px;
     }
-    main {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 40px 24px 60px;
-    }
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-    .lead {
-      font-size: 17px;
-      color: #333;
-      margin-bottom: 28px;
-    }
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 18px 20px;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .card:hover {
-      border-color: #999;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-    .card h2 {
-      margin: 0 0 6px;
-      font-size: 18px;
-      color: #1a1a1a;
-    }
-    .card p {
-      margin: 0;
-      font-size: 14px;
-      color: #555;
+    .doc-footer a { color: #2E74B5; text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .doc-header { padding: 36px 20px 32px; }
+      .doc-header h1 { font-size: 22px; }
+      .doc-card { padding: 16px 18px; gap: 14px; }
+      .doc-icon { width: 40px; height: 40px; font-size: 18px; }
     }
   </style>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Main">
-    <div class="site-nav-inner">
-      <a class="brand" href="index.html">Overcome</a>
-      <ul>
-        <li><a href="privacy_policy.html">Privacy Policy</a></li>
-        <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-      </ul>
-    </div>
-  </nav>
+<div class="wrapper">
 
-  <main>
-    <h1>Legal &amp; policies</h1>
-    <p class="lead">
-      Official documents for <strong>Overcome: Dopamine Reset for Men</strong>.
-      Choose a document below or use the navigation bar.
-    </p>
-    <div class="cards">
-      <a class="card" href="privacy_policy.html">
-        <h2>Privacy Policy</h2>
-        <p>How we collect, use, store, and protect your personal data.</p>
-      </a>
-      <a class="card" href="overcome_terms_of_service_html.html">
-        <h2>Terms of Service</h2>
-        <p>Rules and conditions for using the Overcome app.</p>
-      </a>
-      <a class="card" href="disclaimer.html">
-        <h2>Disclaimer</h2>
-        <p>Important limitations and clarifications about the service.</p>
-      </a>
-    </div>
-  </main>
+  <div class="doc-header">
+    <div class="app-icon">⚡</div>
+    <div class="app-name">Overcome</div>
+    <h1>Legal &amp; Policy Documents</h1>
+    <p class="tagline">Everything you need to know about how Overcome works, what we collect, and your rights.</p>
+  </div>
+
+  <div class="intro">
+    <p>All Overcome legal documents are written in plain English. Select a document below to read it in full.</p>
+  </div>
+
+  <div class="doc-grid">
+
+    <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/privacy_policy.html">
+      <div class="doc-icon blue">🔒</div>
+      <div class="doc-info">
+        <div class="doc-title">Privacy Policy</div>
+        <div class="doc-desc">What data we collect, why we collect it, how long we keep it, and your rights under DPDPA 2023.</div>
+      </div>
+      <div class="doc-arrow">›</div>
+    </a>
+
+    <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/overcome_terms_of_service_html.html">
+      <div class="doc-icon blue">📋</div>
+      <div class="doc-info">
+        <div class="doc-title">Terms of Service</div>
+        <div class="doc-desc">The agreement between you and Overcome — subscriptions, the Cashback Guarantee, user obligations, and more.</div>
+      </div>
+      <div class="doc-arrow">›</div>
+    </a>
+
+    <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/overcome_refund_policy.html">
+      <div class="doc-icon green">💳</div>
+      <div class="doc-info">
+        <div class="doc-title">Refund &amp; Cashback Policy</div>
+        <div class="doc-desc">How the 90% Cashback Guarantee works, completion criteria, claim process, and what qualifies.</div>
+      </div>
+      <div class="doc-arrow">›</div>
+    </a>
+
+    <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/overcome_delete_account.html">
+      <div class="doc-icon red">🗑️</div>
+      <div class="doc-info">
+        <div class="doc-title">Delete Account &amp; Data</div>
+        <div class="doc-desc">How to request deletion of your account and personal data, and what gets deleted or retained.</div>
+      </div>
+      <div class="doc-arrow">›</div>
+    </a>
+
+    <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/disclaimer.html">
+      <div class="doc-icon amber">⚠️</div>
+      <div class="doc-info">
+        <div class="doc-title">Medical Disclaimer</div>
+        <div class="doc-desc">Overcome is a habit-building tool, not a medical service. Read this before using the app.</div>
+      </div>
+      <div class="doc-arrow">›</div>
+    </a>
+
+  </div>
+
+  <div class="contact-box">
+    <h2>Questions or Concerns?</h2>
+    <p>For privacy queries, data requests, refund claims, or any legal matter — email us directly. We read every email.</p>
+    <a class="contact-email" href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>
+    <p class="contact-officer">Grievance Officer: Digvijay Prashant Bhosale</p>
+  </div>
+
+  <div class="doc-footer">
+    Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
+    Bengaluru, Karnataka, India &nbsp;|&nbsp;
+    <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>
+  </div>
+
+</div>
 </body>
 </html>
