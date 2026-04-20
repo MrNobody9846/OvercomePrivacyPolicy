@@ -15,77 +15,87 @@
 
     .wrapper { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; flex: 1; }
 
+    /* ── header ── */
     .doc-header {
       text-align: center; padding: 48px 24px 40px;
       background: linear-gradient(135deg, #1F4E79 0%, #2E74B5 100%);
       border-radius: 14px; margin-bottom: 48px; color: #fff;
     }
-    .app-icon {
-      width: 72px; height: 72px; background: rgba(255,255,255,0.15);
-      border-radius: 18px; margin: 0 auto 20px; display: flex;
-      align-items: center; justify-content: center; font-size: 36px;
+    .doc-header .app-name {
+      font-size: 13px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; opacity: 0.8; margin-bottom: 10px;
     }
-    .doc-header .app-name { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 8px; }
-    .doc-header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
-    .doc-header .tagline { font-size: 15px; opacity: 0.8; max-width: 400px; margin: 0 auto; }
+    .doc-header h1 {
+      font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px;
+    }
+    .doc-header .tagline {
+      font-size: 15px; opacity: 0.8; max-width: 420px; margin: 0 auto;
+    }
 
-    .intro { text-align: center; margin-bottom: 36px; }
+    /* ── intro ── */
+    .intro { text-align: center; margin-bottom: 32px; }
     .intro p { font-size: 15px; color: #555; max-width: 520px; margin: 0 auto; }
 
-    .doc-grid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+    /* ── doc cards ── */
+    .doc-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
 
     .doc-card {
-      background: #fff; border-radius: 12px; padding: 20px 24px;
+      background: #fff; border-radius: 10px; padding: 20px 24px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #e8eef5;
-      display: flex; align-items: center; gap: 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
       text-decoration: none; color: inherit;
       transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
     }
-    .doc-card:hover { box-shadow: 0 4px 16px rgba(31,78,121,0.12); transform: translateY(-2px); border-color: #2E74B5; }
-
-    .doc-icon {
-      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center; font-size: 22px;
+    .doc-card:hover {
+      box-shadow: 0 4px 16px rgba(31,78,121,0.10);
+      transform: translateY(-1px);
+      border-color: #2E74B5;
     }
-    .doc-icon.blue { background: #EBF3FB; }
-    .doc-icon.green { background: #F0FFF4; }
-    .doc-icon.amber { background: #FFF8E7; }
-    .doc-icon.red { background: #FDF3F3; }
 
     .doc-info { flex: 1; }
-    .doc-info .doc-title { font-size: 16px; font-weight: 700; color: #1F4E79; margin-bottom: 3px; }
+    .doc-info .doc-title {
+      font-size: 15px; font-weight: 700; color: #1F4E79; margin-bottom: 3px;
+    }
     .doc-info .doc-desc { font-size: 13px; color: #666; line-height: 1.5; }
 
-    .doc-arrow { color: #2E74B5; font-size: 20px; flex-shrink: 0; opacity: 0.5; }
+    .doc-arrow { color: #2E74B5; font-size: 20px; flex-shrink: 0; opacity: 0.4; font-weight: 300; }
     .doc-card:hover .doc-arrow { opacity: 1; }
 
+    /* ── divider ── */
+    .divider {
+      height: 1px; background: #e8eef5; margin: 8px 0;
+    }
+
+    /* ── contact ── */
     .contact-box {
-      background: #fff; border-radius: 12px; padding: 24px 28px;
+      background: #fff; border-radius: 10px; padding: 28px 32px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #e8eef5;
       text-align: center;
     }
-    .contact-box h2 { font-size: 16px; font-weight: 700; color: #1F4E79; margin-bottom: 8px; }
-    .contact-box p { font-size: 14px; color: #555; margin-bottom: 14px; }
+    .contact-box h2 { font-size: 15px; font-weight: 700; color: #1F4E79; margin-bottom: 8px; }
+    .contact-box p { font-size: 14px; color: #555; margin-bottom: 16px; line-height: 1.6; }
     .contact-email {
-      display: inline-block; background: #EBF3FB; color: #1F4E79;
-      font-weight: 700; font-size: 15px; padding: 10px 24px;
-      border-radius: 8px; text-decoration: none;
+      display: inline-block; background: #1F4E79; color: #fff;
+      font-weight: 600; font-size: 14px; padding: 10px 28px;
+      border-radius: 8px; text-decoration: none; letter-spacing: 0.2px;
     }
-    .contact-email:hover { background: #D6E4F0; }
-    .contact-officer { font-size: 13px; color: #888; margin-top: 10px; }
+    .contact-email:hover { background: #2E74B5; }
+    .contact-officer { font-size: 13px; color: #999; margin-top: 12px; }
 
+    /* ── footer ── */
     .doc-footer {
-      text-align: center; padding: 24px;
-      font-size: 13px; color: #aaa;
+      text-align: center; padding: 28px 0 0;
+      font-size: 13px; color: #bbb;
       border-top: 1px solid #e8eef5; margin-top: 48px;
     }
     .doc-footer a { color: #2E74B5; text-decoration: none; }
+    .doc-footer a:hover { text-decoration: underline; }
 
     @media (max-width: 480px) {
       .doc-header { padding: 36px 20px 32px; }
       .doc-header h1 { font-size: 22px; }
-      .doc-card { padding: 16px 18px; gap: 14px; }
-      .doc-icon { width: 40px; height: 40px; font-size: 18px; }
+      .doc-card { padding: 16px 18px; }
+      .contact-box { padding: 20px 18px; }
     }
   </style>
 </head>
@@ -93,61 +103,55 @@
 <div class="wrapper">
 
   <div class="doc-header">
-    <div class="app-icon">⚡</div>
-    <div class="app-name">Overcome</div>
+    <div class="app-name">Overcome: Dopamine Reset for Men</div>
     <h1>Legal &amp; Policy Documents</h1>
-    <p class="tagline">Everything you need to know about how Overcome works, what we collect, and your rights.</p>
+    <p class="tagline">All documents are written in plain English. Select one below to read it in full.</p>
   </div>
 
   <div class="intro">
-    <p>All Overcome legal documents are written in plain English. Select a document below to read it in full.</p>
+    <p>This page contains all legal and policy documents governing your use of the Overcome app.</p>
   </div>
 
   <div class="doc-grid">
 
     <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/privacy_policy.html">
-      <div class="doc-icon blue">🔒</div>
       <div class="doc-info">
         <div class="doc-title">Privacy Policy</div>
         <div class="doc-desc">What data we collect, why we collect it, how long we keep it, and your rights under DPDPA 2023.</div>
       </div>
-      <div class="doc-arrow">›</div>
+      <div class="doc-arrow">&#8250;</div>
     </a>
 
     <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/overcome_terms_of_service_html.html">
-      <div class="doc-icon blue">📋</div>
       <div class="doc-info">
         <div class="doc-title">Terms of Service</div>
         <div class="doc-desc">The agreement between you and Overcome — subscriptions, the Cashback Guarantee, user obligations, and more.</div>
       </div>
-      <div class="doc-arrow">›</div>
+      <div class="doc-arrow">&#8250;</div>
     </a>
 
     <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/overcome_refund_policy.html">
-      <div class="doc-icon green">💳</div>
       <div class="doc-info">
         <div class="doc-title">Refund &amp; Cashback Policy</div>
-        <div class="doc-desc">How the 90% Cashback Guarantee works, completion criteria, claim process, and what qualifies.</div>
+        <div class="doc-desc">How the 90% Cashback Guarantee works, completion criteria, the claim process, and disqualifying conditions.</div>
       </div>
-      <div class="doc-arrow">›</div>
+      <div class="doc-arrow">&#8250;</div>
     </a>
 
     <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/overcome_delete_account.html">
-      <div class="doc-icon red">🗑️</div>
       <div class="doc-info">
         <div class="doc-title">Delete Account &amp; Data</div>
-        <div class="doc-desc">How to request deletion of your account and personal data, and what gets deleted or retained.</div>
+        <div class="doc-desc">How to request deletion of your account and personal data, what gets deleted, and what is retained.</div>
       </div>
-      <div class="doc-arrow">›</div>
+      <div class="doc-arrow">&#8250;</div>
     </a>
 
     <a class="doc-card" href="https://mrnobody9846.github.io/OvercomePrivacyPolicy/disclaimer.html">
-      <div class="doc-icon amber">⚠️</div>
       <div class="doc-info">
         <div class="doc-title">Medical Disclaimer</div>
-        <div class="doc-desc">Overcome is a habit-building tool, not a medical service. Read this before using the app.</div>
+        <div class="doc-desc">Overcome is a habit-building tool, not a medical service or therapy platform. Read this before using the app.</div>
       </div>
-      <div class="doc-arrow">›</div>
+      <div class="doc-arrow">&#8250;</div>
     </a>
 
   </div>
@@ -160,8 +164,8 @@
   </div>
 
   <div class="doc-footer">
-    Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
-    Bengaluru, Karnataka, India &nbsp;|&nbsp;
+    Overcome: Dopamine Reset for Men &nbsp;&middot;&nbsp;
+    Bengaluru, Karnataka, India &nbsp;&middot;&nbsp;
     <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>
   </div>
 
