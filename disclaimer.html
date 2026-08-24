@@ -2,273 +2,226 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Overcome — Disclaimer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Disclaimer — Overcome</title>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 24px;
-      background: #ffffff;
-      color: #111;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px; line-height: 1.7; color: #1a1a2e; background: #f8f9fc;
     }
-    h1, h2, h3 {
-      margin-top: 24px;
+    .wrapper { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    .doc-header {
+      text-align: center; padding: 40px 24px 32px;
+      background: linear-gradient(135deg, #1F4E79 0%, #2E74B5 100%);
+      border-radius: 12px; margin-bottom: 40px; color: #fff;
     }
-    .container {
-      max-width: 700px;
-      margin: auto;
-    }
-    .headline {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .subheadline {
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-    .section {
-      margin: 20px 0;
-    }
-    .card {
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      background: #f5f5f5;
-    }
-    .checkbox-container {
-      margin-top: 30px;
-      padding: 16px;
-      background: #f5f5f5;
-      border-radius: 8px;
-    }
-    .crisis {
-      background: #FFF4F4;
-      border: 1px solid #C0392B;
-      border-left-width: 4px;
-      border-radius: 8px;
-      padding: 16px;
-      margin: 20px 0;
-    }
-    .crisis strong { color: #C0392B; }
-    .crisis .num {
-      font-size: 20px;
-      font-weight: bold;
-      color: #C0392B;
-      display: block;
-      margin: 8px 0 4px;
-    }
-    .doc-version {
-      font-size: 12px;
-      color: #888;
-      margin-top: 24px;
-      padding-top: 12px;
-      border-top: 1px solid #e0e0e0;
-    }
-    .button {
-      margin-top: 16px;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      border-radius: 6px;
-      background: #ccc;
-      color: #fff;
-      font-size: 16px;
-      cursor: not-allowed;
-    }
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-    * { box-sizing: border-box; }
+    .doc-header .app-name { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 10px; }
+    .doc-header h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .doc-header .meta { font-size: 13px; opacity: 0.75; }
+
+    .callout { background: #EBF3FB; border-left: 4px solid #2E74B5; border-radius: 6px; padding: 16px 20px; margin: 20px 0; font-size: 14px; color: #1F4E79; font-style: italic; line-height: 1.6; }
+    .callout.warning { background: #FDF3F3; border-left-color: #C0392B; color: #C0392B; font-style: normal; }
+
+    .section { background: #fff; border-radius: 10px; padding: 28px 32px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    h2 { font-size: 17px; font-weight: 700; color: #1F4E79; border-bottom: 2px solid #1F4E79; padding-bottom: 8px; margin-bottom: 16px; }
+    h3 { font-size: 15px; font-weight: 600; color: #2E74B5; margin: 20px 0 8px; }
+    p { font-size: 15px; color: #333; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: #333; margin-bottom: 6px; line-height: 1.6; }
+
+    .lede { font-size: 16px; color: #444; }
+
+    .is-isnot { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+    .panel { border-radius: 10px; padding: 20px; border: 1px solid #e0e8f4; }
+    .panel.yes { background: #F0FFF4; border-color: #27AE60; }
+    .panel.no { background: #FDF3F3; border-color: #C0392B; }
+    .panel .panel-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+    .panel.yes .panel-title { color: #1A6B3A; }
+    .panel.no .panel-title { color: #C0392B; }
+    .panel p { font-size: 14px; margin-bottom: 8px; }
+    .panel p:last-child { margin-bottom: 0; }
+
+    .crisis { background: #FFF4F4; border: 1px solid #C0392B; border-left-width: 4px; border-radius: 8px; padding: 20px 24px; margin: 16px 0; }
+    .crisis .crisis-title { font-size: 15px; font-weight: 700; color: #C0392B; margin-bottom: 10px; }
+    .crisis .num { font-size: 26px; font-weight: 800; color: #C0392B; display: block; margin: 4px 0 6px; letter-spacing: -0.5px; }
+    .crisis p { font-size: 14px; color: #7A2A22; }
+    .crisis p:last-child { margin-bottom: 0; }
+
+    .email-block { background: #F0FFF4; border: 1px solid #27AE60; border-radius: 8px; padding: 20px 24px; margin: 16px 0; text-align: center; }
+    .email-block .email-label { font-size: 13px; color: #2D6A4F; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .email-block .email-address { font-size: 20px; font-weight: 700; color: #1A6B3A; }
+    .email-block .email-address a { color: #1A6B3A; text-decoration: none; }
+    .email-block .email-address a:hover { text-decoration: underline; }
+    .email-block .email-sub { font-size: 13px; color: #2D6A4F; margin-top: 6px; }
+
+    .doc-footer { text-align: center; padding: 24px; font-size: 13px; color: #888; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+    a { color: #2E74B5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { color: #1a1a2e; }
+
+    /* ── shared site nav ── */
     .site-nav {
-      background: #1a1a1a;
-      color: #fff;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e9f2;
       padding: 0 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 3px rgba(31,78,121,0.06);
     }
     .site-nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 52px;
+      max-width: 780px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 8px 16px;
+      min-height: 54px; padding: 10px 0;
     }
     .site-nav a.brand {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 0.02em;
+      color: #1F4E79; text-decoration: none;
+      font-weight: 800; font-size: 15px; letter-spacing: -0.2px;
+      display: inline-flex; align-items: center; gap: 7px;
     }
-    .site-nav a.brand:hover { color: #e0e0e0; }
-    .site-nav li a.current { color: #fff; font-weight: 600; }
-    .site-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-    }
+    .site-nav a.brand .arrow { color: #2E74B5; font-weight: 400; font-size: 17px; line-height: 1; }
+    .site-nav a.brand:hover { color: #2E74B5; text-decoration: none; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 6px; }
+    .site-nav li { margin: 0; }
     .site-nav li a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
+      color: #5a6b7d; text-decoration: none;
+      font-size: 13px; font-weight: 500;
+      padding: 5px 11px; border-radius: 6px; display: block;
+      transition: background 0.15s, color 0.15s;
     }
-    .site-nav li a:hover { color: #fff; }
+    .site-nav li a:hover { color: #1F4E79; background: #EBF3FB; text-decoration: none; }
+    .site-nav li a.current { color: #fff; background: #2E74B5; font-weight: 600; }
+    .site-nav li a.current:hover { background: #1F4E79; color: #fff; }
+
+    @media (max-width: 600px) {
+      .section { padding: 20px 16px; }
+      .doc-header h1 { font-size: 24px; }
+      .is-isnot { grid-template-columns: 1fr; }
+      .site-nav { padding: 0 14px; }
+      .site-nav-inner { min-height: 0; padding: 10px 0 12px; }
+      .site-nav li a { font-size: 12px; padding: 5px 9px; }
+    }
   </style>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Main">
+  <nav class="site-nav" aria-label="Legal documents">
     <div class="site-nav-inner">
-      <a class="brand" href="index.html">&#8592; Overcome Legal</a>
+      <a class="brand" href="index.html"><span class="arrow">&#8592;</span> Overcome Legal</a>
       <ul>
-          <li><a href="privacy_policy.html">Privacy Policy</a></li>
-          <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
-          <li><a href="overcome_refund_policy.html">Refund Policy</a></li>
-          <li><a href="overcome_delete_account.html">Delete Account</a></li>
-          <li><a href="disclaimer.html" class="current">Disclaimer</a></li>
+        <li><a href="privacy_policy.html">Privacy</a></li>
+        <li><a href="overcome_terms_of_service_html.html">Terms</a></li>
+        <li><a href="overcome_refund_policy.html">Refunds</a></li>
+        <li><a href="overcome_delete_account.html">Delete Account</a></li>
+        <li><a href="disclaimer.html" class="current">Disclaimer</a></li>
       </ul>
     </div>
   </nav>
-  <div class="container">
+<div class="wrapper">
 
-    <div class="headline">
-      Before you begin — please read this.
-    </div>
-    <div class="subheadline">
-      This isn't your usual disclaimer. It's worth 60 seconds.
-    </div>
-
-    <div class="section">
-      <p>
-        You're here because you want to change something real about your life.
-        That takes courage, and we don't take that lightly.
-      </p>
-
-      <p>
-        Overcome is built to support that change — through structure, daily challenges, and honest progress tracking. But we want to be clear about what we are and what we're not.
-      </p>
-    </div>
-
-    <div class="section">
-      <div class="card">
-        <strong>What Overcome is:</strong>
-        <p>
-          A habit-building tool designed to help you reduce compulsive behaviour and rebuild focus — one day at a time.
-        </p>
-      </div>
-
-      <div class="card">
-        <strong>What Overcome is not:</strong>
-        <p>
-          A medical service, therapy platform, or clinical treatment of any kind. We do not diagnose, treat, cure, or prevent any condition or disorder.
-        </p>
-        <p>
-          <strong>This includes anything we say to you directly.</strong> In Founder's Chat, what we send you is our own personal experience, encouragement, and motivation — approaches that worked for us. It is never medical advice, and what worked for us may not work for you. We are not therapists, counsellors, psychiatrists, or medical practitioners.
-        </p>
-      </div>
-    </div>
-
-    <div class="section">
-      <p>
-        <strong>If you're going through something serious</strong> — depression, anxiety, or anything that feels bigger than a habit — please speak with a qualified mental health professional. Don't rely on an app when you need real support.
-      </p>
-
-      <div class="crisis">
-        <strong>If you're in crisis, or thinking about harming yourself, please reach out now.</strong>
-        <span class="num">Tele-MANAS — 14416</span>
-        Also reachable on 1-800-891-4416. Free, confidential, available 24 hours a day, in English and 20 Indian languages. It is a Government of India service run through the National Institute of Mental Health and Neurosciences.
-        <p style="margin-top:10px; margin-bottom:0;">
-          Overcome is not a crisis service. Founder's Chat is not monitored around the clock and is not a substitute for the number above. If you are in immediate danger, contact your local emergency services.
-        </p>
-      </div>
-    </div>
-
-    <div class="section">
-      <p>
-        <strong>If you ever need to reach us:</strong><br/>
-        <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> — we read every email.
-      </p>
-    </div>
-
-    <div class="section">
-      <p>
-        <strong>You must be 18 or older</strong> to use Overcome. By continuing, you confirm that you are.
-      </p>
-      <p>
-        <strong>Your data and your rights:</strong><br/>
-        By continuing, you agree to our
-        <a href="overcome_terms_of_service_html.html">Terms of Service</a> and
-        <a href="privacy_policy.html">Privacy Policy</a>.
-        Both are written in plain English and worth reading. You can also read the
-        <a href="overcome_refund_policy.html">Refund Policy</a> and find out
-        <a href="overcome_delete_account.html">how to delete your account and data</a> at any time.
-      </p>
-    </div>
-
-    <div class="checkbox-container">
-      <label>
-        <input type="checkbox" id="ackCheckbox" />
-        I have read and understood this. I am 18 or older. I know Overcome is a
-        habit-building tool, not a medical service or therapy platform, and that
-        nothing anyone at Overcome tells me is medical advice.
-      </label>
-
-      <button class="button" id="continueBtn" disabled>
-        I understand — let's begin
-      </button>
-    </div>
-
-    <p style="margin-top:24px;"><a href="index.html">&#8592; Back to all legal documents</a></p>
-
-    <div class="doc-version">
-      Disclaimer version 2.0 &nbsp;&middot;&nbsp; 24 August 2026 &nbsp;&middot;&nbsp;
-      Overcome is currently available on Android via Google Play.
-    </div>
-
+  <div class="doc-header">
+    <div class="app-name">Overcome: Dopamine Reset for Men</div>
+    <h1>Medical Disclaimer</h1>
+    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 24 August 2026</div>
   </div>
 
+  <div class="callout">
+    This isn't your usual disclaimer, and it's worth 60 seconds. You're here because you want to change something real about your life. That takes courage, and we don't take it lightly. Overcome is built to support that change — through structure, daily challenges, and honest progress tracking. But we want to be completely clear about what we are, and what we are not.
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2>1. What Overcome Is — and What It Is Not</h2>
+
+    <div class="is-isnot">
+      <div class="panel yes">
+        <div class="panel-title">What Overcome is</div>
+        <p>A habit-building tool designed to help you reduce compulsive behaviour and rebuild focus — one day at a time.</p>
+        <p>Structure, daily challenges, streak tracking, and honest progress measurement.</p>
+      </div>
+      <div class="panel no">
+        <div class="panel-title">What Overcome is not</div>
+        <p>A medical service, therapy platform, or clinical treatment of any kind.</p>
+        <p>We do not diagnose, treat, cure, or prevent any condition or disorder.</p>
+      </div>
+    </div>
+
+    <p>The programme content in Overcome is based on general principles of habit formation and behavioural psychology. It is educational and motivational in nature. Individual results vary significantly and are not guaranteed.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2>2. This Includes Anything We Say to You Directly</h2>
+    <p>Overcome includes <strong>Founder's Chat</strong>, a private channel between you and the founding team. What we send you there is our own personal experience, encouragement, and motivation — approaches that worked for us.</p>
+    <div class="callout warning">
+      Nothing we say in Founder's Chat is medical advice. We are not therapists, counsellors, psychiatrists, or medical practitioners. What worked for us may not work for you, and may not be appropriate for your circumstances. Founder's Chat is not monitored around the clock and is not a crisis service.
+    </div>
+    <p>The same applies to any future feature where a person communicates with you through Overcome, including the planned Recovery Mentor Chat. A Recovery Mentor is a trained peer supporter, not a licensed clinician. See <a href="overcome_terms_of_service_html.html">Terms of Service</a> Section 12 for the full position.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2>3. If You're Going Through Something Serious</h2>
+    <p>If you're dealing with depression, anxiety, or anything that feels bigger than a habit, please speak with a qualified mental health professional. Don't rely on an app when you need real support, and don't delay seeking help because of anything you've read or experienced here.</p>
+
+    <div class="crisis">
+      <div class="crisis-title">If you're in crisis, or thinking about harming yourself, please reach out now.</div>
+      <span class="num">Tele-MANAS &mdash; 14416</span>
+      <p>Also reachable on <strong>1-800-891-4416</strong>. Free, confidential, and available 24 hours a day, in English and 20 Indian languages. It's a Government of India service run through the National Institute of Mental Health and Neurosciences.</p>
+      <p>Overcome is not a crisis service, and Founder's Chat is not a substitute for the number above. If you are in immediate danger, contact your local emergency services.</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2>4. Age Requirement</h2>
+    <p>You must be <strong>18 years of age or older</strong> to use Overcome. By creating an account, you confirm that you are.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2>5. Your Agreement and Your Rights</h2>
+    <p>By using Overcome, you agree to our <a href="overcome_terms_of_service_html.html">Terms of Service</a> and <a href="privacy_policy.html">Privacy Policy</a>. Both are written in plain English and worth reading.</p>
+    <p>You can also read the <a href="overcome_refund_policy.html">Refund Policy</a>, which explains how the Cashback Guarantee works, and find out <a href="overcome_delete_account.html">how to delete your account and data</a> at any time.</p>
+    <p>Overcome is currently available on Android via Google Play.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2>6. If You Ever Need to Reach Us</h2>
+    <div class="email-block">
+      <div class="email-label">We read every email</div>
+      <div class="email-address"><a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a></div>
+      <div class="email-sub">Operated by Digvijay Prashant Bhosale and Adari Yashwanth &middot; Bengaluru, Karnataka, India</div>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
+    <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
+    Bengaluru, Karnataka, India<br>
+    Disclaimer version 2.0 &nbsp;|&nbsp; Effective 20 March 2026 &nbsp;|&nbsp; Last Updated 24 August 2026
+  </div>
+
+</div>
+
 <!-- ============================================================
-     NOTE ON THIS PAGE AS A CONSENT RECORD
+     NOTE ON ACCEPTANCE RECORDS
 
-     The checkbox and button below are presentational only. Nothing
-     is recorded when a user ticks and continues, so this page cannot
-     currently evidence that any particular user accepted any
-     particular version of the Terms.
+     The acknowledgement checkbox previously on this page has been
+     removed: this is a read-only reference document and nothing was
+     being recorded when a user ticked it.
 
-     If this acknowledgement is being relied on as acceptance, the
-     in-app equivalent should store, server-side and per user:
+     Acceptance should be captured in the app instead. Wherever the
+     user confirms they have read this disclaimer, store server-side
+     and per user:
        - the user id
-       - the version string above ("2.0")
-       - a UTC timestamp of the tick
-     Terms of Service Section 14 gives users the right to stay on the
-     version they accepted when they refuse a material change, which
-     only works if the accepted version was recorded.
+       - the disclaimer version string ("2.0")
+       - a UTC timestamp
+
+     Terms of Service Section 14 gives users the right to remain on
+     the version they accepted when they refuse a material change,
+     which only works if the accepted version was recorded.
      ============================================================ -->
-
-  <script>
-    const checkbox = document.getElementById('ackCheckbox');
-    const button = document.getElementById('continueBtn');
-
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        button.disabled = false;
-        button.style.background = '#000';
-        button.style.cursor = 'pointer';
-      } else {
-        button.disabled = true;
-        button.style.background = '#ccc';
-        button.style.cursor = 'not-allowed';
-      }
-    });
-  </script>
 </body>
 </html>

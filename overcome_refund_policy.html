@@ -71,35 +71,58 @@
     }
 
     /* ── shared site nav ── */
-    .site-nav { background: #1a1a1a; color: #fff; padding: 0 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-    .site-nav-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 0; }
-    .site-nav a.brand { color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.02em; font-size: 15px; }
-    .site-nav a.brand:hover { color: #e0e0e0; text-decoration: none; }
-    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e9f2;
+      padding: 0 20px;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 3px rgba(31,78,121,0.06);
+    }
+    .site-nav-inner {
+      max-width: 780px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 8px 16px;
+      min-height: 54px; padding: 10px 0;
+    }
+    .site-nav a.brand {
+      color: #1F4E79; text-decoration: none;
+      font-weight: 800; font-size: 15px; letter-spacing: -0.2px;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .site-nav a.brand .arrow { color: #2E74B5; font-weight: 400; font-size: 17px; line-height: 1; }
+    .site-nav a.brand:hover { color: #2E74B5; text-decoration: none; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 6px; }
     .site-nav li { margin: 0; }
-    .site-nav li a { color: #bbb; text-decoration: none; font-size: 13px; }
-    .site-nav li a:hover { color: #fff; text-decoration: none; }
-    .site-nav li a.current { color: #fff; font-weight: 600; }
-    .back-link { display: inline-block; margin-bottom: 8px; font-size: 13px; color: #2E74B5; text-decoration: none; }
-    .back-link:hover { text-decoration: underline; }
+    .site-nav li a {
+      color: #5a6b7d; text-decoration: none;
+      font-size: 13px; font-weight: 500;
+      padding: 5px 11px; border-radius: 6px; display: block;
+      transition: background 0.15s, color 0.15s;
+    }
+    .site-nav li a:hover { color: #1F4E79; background: #EBF3FB; text-decoration: none; }
+    .site-nav li a.current { color: #fff; background: #2E74B5; font-weight: 600; }
+    .site-nav li a.current:hover { background: #1F4E79; color: #fff; }
+    @media (max-width: 600px) {
+      .site-nav { padding: 0 14px; }
+      .site-nav-inner { min-height: 0; padding: 10px 0 12px; }
+      .site-nav li a { font-size: 12px; padding: 5px 9px; }
+    }
   </style>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Main">
+  <nav class="site-nav" aria-label="Legal documents">
     <div class="site-nav-inner">
-      <a class="brand" href="index.html">&#8592; Overcome Legal</a>
+      <a class="brand" href="index.html"><span class="arrow">&#8592;</span> Overcome Legal</a>
       <ul>
-          <li><a href="privacy_policy.html">Privacy Policy</a></li>
-          <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
-          <li><a href="overcome_refund_policy.html" class="current">Refund Policy</a></li>
-          <li><a href="overcome_delete_account.html">Delete Account</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="privacy_policy.html">Privacy</a></li>
+        <li><a href="overcome_terms_of_service_html.html">Terms</a></li>
+        <li><a href="overcome_refund_policy.html" class="current">Refunds</a></li>
+        <li><a href="overcome_delete_account.html">Delete Account</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
       </ul>
     </div>
   </nav>
 <div class="wrapper">
-
-  <a class="back-link" href="index.html">&#8592; All legal documents</a>
 
   <div class="doc-header">
     <div class="app-name">Overcome: Dopamine Reset for Men</div>
@@ -279,11 +302,10 @@
   </div>
 
   <div class="doc-footer">
-    <a class="back-link" href="index.html">&#8592; Back to all legal documents</a><br>
     Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
     <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
     Bengaluru, Karnataka, India &nbsp;|&nbsp;
-    Effective 20 March 2026 &nbsp;|&nbsp; Updated 24 August 2026
+    Effective 20 March 2026 &nbsp;|&nbsp; Last Updated 24 August 2026
   </div>
 
 </div>
