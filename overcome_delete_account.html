@@ -58,24 +58,54 @@
       .data-table { font-size: 13px; }
       .data-table th, .data-table td { padding: 8px 10px; }
     }
+
+    /* ── shared site nav ── */
+    .site-nav { background: #1a1a1a; color: #fff; padding: 0 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .site-nav-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 0; }
+    .site-nav a.brand { color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.02em; font-size: 15px; }
+    .site-nav a.brand:hover { color: #e0e0e0; text-decoration: none; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-nav li { margin: 0; }
+    .site-nav li a { color: #bbb; text-decoration: none; font-size: 13px; }
+    .site-nav li a:hover { color: #fff; text-decoration: none; }
+    .site-nav li a.current { color: #fff; font-weight: 600; }
+    .back-link { display: inline-block; margin-bottom: 8px; font-size: 13px; color: #2E74B5; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Main">
+    <div class="site-nav-inner">
+      <a class="brand" href="index.html">&#8592; Overcome Legal</a>
+      <ul>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+          <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
+          <li><a href="overcome_refund_policy.html">Refund Policy</a></li>
+          <li><a href="overcome_delete_account.html" class="current">Delete Account</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+  </nav>
 <div class="wrapper">
+
+  <a class="back-link" href="index.html">&#8592; All legal documents</a>
 
   <div class="doc-header">
     <div class="app-name">Overcome: Dopamine Reset for Men</div>
     <h1>Delete Your Account & Data</h1>
-    <div class="meta">Last Updated: 20 April 2026</div>
+    <div class="meta">Last Updated: 24 August 2026</div>
   </div>
 
   <!-- Overview -->
   <div class="section">
     <h2>Overview</h2>
     <p>This page explains how users of the <strong>Overcome: Dopamine Reset for Men</strong> Android app can request deletion of their account and associated personal data.</p>
-    <p>Account deletion is processed by email. There is no waiting period — submit your request and we will confirm receipt within 48 hours and complete deletion within 30 days.</p>
+    <p>Account deletion is processed by email. You do not need to wait or qualify for anything — submit your request and we will confirm receipt within 48 hours, deactivate your account within 7 days, and remove your data from our live systems within 30 days.</p>
     <div class="callout">
-      Your privacy matters to us. All personal data associated with your account is permanently deleted upon request, with the limited exceptions described below required by Indian law.
+      Your privacy matters to us. All personal data associated with your account is deleted upon request, with the limited exceptions described below required by Indian law.
+    </div>
+    <div class="callout warning">
+      <strong>About backups.</strong> We keep encrypted backups on a rolling cycle so we can recover from a system failure. After your data is removed from our live systems within 30 days, a copy may still sit in a backup until that backup is overwritten, which takes up to <strong>90 days</strong> in total. Backups are not accessible for ordinary use, are never used to restore a deleted account, and are only ever restored in the event of a system failure. We would rather tell you this than claim an instant erasure we cannot deliver.
     </div>
   </div>
 
@@ -89,7 +119,7 @@
       <li>Open the Overcome app and go to your <strong>Profile Page</strong>.</li>
       <li>Tap <strong>"Request Account Deletion"</strong>. This opens a pre-filled email addressed to overcomeapp0@gmail.com.</li>
       <li>Send the email without modifying the subject line.</li>
-      <li>We will confirm receipt within <strong>48 hours</strong> and complete deletion within <strong>30 days</strong>.</li>
+      <li>We will confirm receipt within <strong>48 hours</strong>, deactivate the account within <strong>7 days</strong>, and complete live deletion within <strong>30 days</strong>.</li>
     </ol>
 
     <h3 style="font-size:15px; font-weight:600; color:#2E74B5; margin: 20px 0 8px;">Option 2 — By email directly</h3>
@@ -99,7 +129,7 @@
       <div class="email-sub">Subject line: <strong>"Data Deletion Request"</strong> — include the email address associated with your account</div>
     </div>
 
-    <p>Upon receiving your request we will send a confirmation email. Your account and all associated data will be permanently and irreversibly deleted within 30 days of that confirmation.</p>
+    <p>Upon receiving your request we will send a confirmation email. Your account and all associated data will be permanently removed from our live systems within 30 days of that confirmation, and from backups within 90 days.</p>
   </div>
 
   <!-- What Gets Deleted -->
@@ -107,16 +137,19 @@
     <h2>What Gets Deleted</h2>
     <p>When your account deletion request is processed, the following data is <strong>permanently deleted</strong>:</p>
     <table class="data-table">
-      <tr><th class="col-left">Data Type</th><th>Deleted Within</th></tr>
-      <tr><td class="col-left">Account profile (email, display name)</td><td>30 days of confirmed request</td></tr>
-      <tr><td class="col-left">Streak data and relapse logs</td><td>Immediately on request confirmation</td></tr>
-      <tr><td class="col-left">Daily challenge completion logs</td><td>30 days of confirmed request</td></tr>
-      <tr><td class="col-left">Clarity Score history</td><td>30 days of confirmed request</td></tr>
-      <tr><td class="col-left">Wellbeing check-in ratings</td><td>30 days of confirmed request</td></tr>
-      <tr><td class="col-left">Badge earn data</td><td>30 days of confirmed request</td></tr>
-      <tr><td class="col-left">App usage and session data</td><td>30 days of confirmed request</td></tr>
+      <tr><th class="col-left">Data Type</th><th>Live Systems</th><th>Backups</th></tr>
+      <tr><td class="col-left">Account profile (email, display name)</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">Streak data and relapse logs</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">Daily challenge completion logs</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">Clarity Score history</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">Wellbeing check-in ratings</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">Badge earn data</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">Founder's Chat messages</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">Push notification tokens</td><td>Within 30 days</td><td>Within 90 days</td></tr>
+      <tr><td class="col-left">App usage, device and session data</td><td>Within 30 days</td><td>Within 90 days</td></tr>
     </table>
-    <p>We will also initiate deletion requests with our third-party service providers — Descope (authentication), Firebase (analytics), and RevenueCat (subscription management) — on your behalf.</p>
+    <p><strong>Founder's Chat</strong> is deleted in full — both your messages and the copy visible to the founding team.</p>
+    <p>We will also initiate deletion requests with our third-party service providers — Descope (authentication), Firebase (analytics and crash reporting), and RevenueCat (subscription management) — on your behalf. For Firebase we submit a deletion instruction for your app instance identifier; Google's own processing timelines then apply and are outside our control.</p>
   </div>
 
   <!-- What Is Retained -->
@@ -130,7 +163,8 @@
       <tr><td class="col-left">Payment and transaction records</td><td>7 years</td><td>Required under Indian accounting and tax law (Income Tax Act, GST regulations)</td></tr>
       <tr><td class="col-left">Support correspondence</td><td>2 years from last communication</td><td>Required for dispute resolution and legal compliance</td></tr>
     </table>
-    <p>No recovery data, streak logs, relapse logs, or habit-related personal data is retained after deletion. Only the financial and correspondence records listed above are kept, and solely for legal compliance purposes.</p>
+    <p>No recovery data, streak logs, relapse logs, chat messages, or habit-related personal data is retained in our live systems after deletion. Only the financial and correspondence records listed above are kept, and solely for legal compliance purposes.</p>
+    <p>Payment records are held by necessity in a form that links a transaction to an account. Where it is possible to do so without breaking the legal requirement, we reduce these records to the minimum the law requires.</p>
   </div>
 
   <!-- Timeline -->
@@ -140,9 +174,10 @@
       <tr><th class="col-left">Stage</th><th>Timeframe</th></tr>
       <tr><td class="col-left">Request received</td><td>Acknowledgement within 48 hours</td></tr>
       <tr><td class="col-left">Account deactivated</td><td>Within 7 days of confirmed request</td></tr>
-      <tr><td class="col-left">All personal data deleted</td><td>Within 30 days of confirmed request</td></tr>
+      <tr><td class="col-left">Personal data removed from live systems</td><td>Within 30 days of confirmed request</td></tr>
       <tr><td class="col-left">Third-party deletion initiated</td><td>Within 30 days of confirmed request</td></tr>
       <tr><td class="col-left">Deletion confirmation sent to you</td><td>Within 30 days of confirmed request</td></tr>
+      <tr><td class="col-left">Backup copies overwritten</td><td>Within 90 days of confirmed request</td></tr>
     </table>
   </div>
 
@@ -153,6 +188,7 @@
     <ul>
       <li><strong>Email:</strong> <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a></li>
       <li><strong>Grievance Officer:</strong> Digvijay Prashant Bhosale</li>
+      <li><strong>Operated by:</strong> Digvijay Prashant Bhosale and Adari Yashwanth</li>
       <li><strong>Deletion status queries:</strong> subject line "Deletion Status — [your registered email]"</li>
       <li><strong>Response time:</strong> within 48 hours</li>
     </ul>
@@ -160,10 +196,11 @@
   </div>
 
   <div class="doc-footer">
+    <a class="back-link" href="index.html">&#8592; Back to all legal documents</a><br>
     Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
     <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
     Bengaluru, Karnataka, India &nbsp;|&nbsp;
-    Last Updated 20 April 2026
+    Last Updated 24 August 2026
   </div>
 
 </div>
