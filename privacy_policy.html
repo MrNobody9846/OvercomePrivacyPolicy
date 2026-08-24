@@ -55,25 +55,53 @@
       .data-table { font-size: 13px; }
       .data-table th, .data-table td { padding: 8px 10px; }
     }
+
+    /* ── shared site nav ── */
+    .site-nav { background: #1a1a1a; color: #fff; padding: 0 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .site-nav-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 0; }
+    .site-nav a.brand { color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.02em; font-size: 15px; }
+    .site-nav a.brand:hover { color: #e0e0e0; text-decoration: none; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-nav li { margin: 0; }
+    .site-nav li a { color: #bbb; text-decoration: none; font-size: 13px; }
+    .site-nav li a:hover { color: #fff; text-decoration: none; }
+    .site-nav li a.current { color: #fff; font-weight: 600; }
+    .back-link { display: inline-block; margin-bottom: 8px; font-size: 13px; color: #2E74B5; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Main">
+    <div class="site-nav-inner">
+      <a class="brand" href="index.html">&#8592; Overcome Legal</a>
+      <ul>
+          <li><a href="privacy_policy.html" class="current">Privacy Policy</a></li>
+          <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
+          <li><a href="overcome_refund_policy.html">Refund Policy</a></li>
+          <li><a href="overcome_delete_account.html">Delete Account</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+  </nav>
 <div class="wrapper">
+
+  <a class="back-link" href="index.html">&#8592; All legal documents</a>
 
   <div class="doc-header">
     <div class="app-name">Overcome: Dopamine Reset for Men</div>
     <h1>Privacy Policy</h1>
-    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 20 April 2026</div>
+    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 24 August 2026</div>
   </div>
 
   <div class="callout">
-    This Privacy Policy explains how Overcome collects, uses, stores, and protects your personal data when you use our application on Android (Google Play) or iOS (App Store). By using the app, you agree to the practices described in this document. Please read it carefully.
+    This Privacy Policy explains how Overcome collects, uses, stores, and protects your personal data when you use our application on Android (Google Play). By using the app, you agree to the practices described in this document. Please read it carefully.
   </div>
 
   <!-- 1 -->
   <div class="section">
     <h2>1. Who We Are</h2>
-    <p>Overcome is a habit-building and dopamine reset mobile application developed and operated by its co-founders as independent developers based in Bengaluru, Karnataka, India. We are not a registered company at this time.</p>
+    <p>Overcome is a habit-building and dopamine reset mobile application developed and operated by its co-founders, <strong>Digvijay Prashant Bhosale</strong> and <strong>Adari Yashwanth</strong>, as independent developers based in Bengaluru, Karnataka, India. We are not a registered company at this time. We intend to incorporate a company to operate Overcome; when we do, this Policy will transfer to that company on the same terms and we will notify you under Section 10 before it takes effect.</p>
+    <p>Overcome is currently available on <strong>Android via Google Play only</strong>.</p>
     <p>Overcome is <strong>not</strong> a medical service, therapy platform, clinical treatment, or mental health provider of any kind. It is a habit and behavioural change tool.</p>
     <p>For all privacy-related matters:</p>
     <ul>
@@ -108,7 +136,7 @@
     <h3>2.3 Data Generated During App Use</h3>
     <table class="data-table">
       <tr><th class="col-type">Data Type</th><th>Purpose</th></tr>
-      <tr><td class="col-type">Daily challenge completion logs</td><td>Recorded automatically per challenge per day. Used to track progress, calculate your Clarity Score, and verify cashback eligibility. Immutable — cannot be retroactively edited.</td></tr>
+      <tr><td class="col-type">Daily challenge completion logs</td><td>Recorded automatically per challenge per day. Used to track progress, calculate your Clarity Score, and verify cashback eligibility. Cannot be edited by you, and not by us to your disadvantage — see Terms of Service Section 5.2 for the narrow technical-fault correction.</td></tr>
       <tr><td class="col-type">Streak data</td><td>Current streak, longest streak, and relapse log dates. Core programme tracking data.</td></tr>
       <tr><td class="col-type">Relapse logs</td><td>Date and dominant emotion selected at time of logging. Optional. Used for self-reflection and Clarity Score depth component.</td></tr>
       <tr><td class="col-type">Clarity Score history</td><td>Daily snapshots of your composite progress score. Used to display progress over time.</td></tr>
@@ -123,11 +151,67 @@
       <tr><th class="col-type">Data Type</th><th>Purpose</th></tr>
       <tr><td class="col-type">Authentication data (Descope)</td><td>Email, display name, and hashed password processed by Descope at account creation and login. Used for identity verification only. Descope has no access to recovery data, streak logs, or challenge completions.</td></tr>
       <tr><td class="col-type">Subscription status and transaction ID (Google Play)</td><td>Collected when you purchase via Google Play. Used to manage plan access. We do not store payment card details.</td></tr>
-      <tr><td class="col-type">Subscription status and transaction ID (RevenueCat)</td><td>RevenueCat manages subscription state on our behalf. Receives subscription status, transaction IDs, and anonymised app user ID only.</td></tr>
-      <tr><td class="col-type">Usage events and crash data (Firebase)</td><td>Anonymised screen views, session data, and error logs. Used to improve performance and fix bugs.</td></tr>
+      <tr><td class="col-type">Subscription status and transaction ID (RevenueCat)</td><td>RevenueCat manages subscription state on our behalf. Receives subscription status, transaction IDs, and a pseudonymous app user ID only — no name, email, or recovery data.</td></tr>
+      <tr><td class="col-type">Usage events and crash data (Firebase)</td><td>Screen views, session data, and error logs, together with a Firebase app instance ID and device identifiers. This data is <strong>pseudonymised</strong>, not anonymous — it is not labelled with your name or email, but it can be traced back to your device and therefore to you. Used to improve performance and fix bugs.</td></tr>
     </table>
 
-    <div class="callout">We never collect your precise location, contacts, photos, microphone input, or any data unrelated to your use of Overcome. We never store information that could publicly identify your engagement with habit recovery content.</div>
+    <h3>2.5 Data Generated Through Founder's Chat</h3>
+    <p>Founder's Chat is a private text channel between you and the Overcome founding team. It is a conversation between you and us only — it is not a channel between you and another user, and no other user can see any part of it.</p>
+    <p><strong>Who can read your messages:</strong> you, and the founding team. Nobody else. Founder's Chat runs on infrastructure we operate ourselves, no third-party messaging provider is involved, and no third party receives the content of your messages.</p>
+    <table class="data-table">
+      <tr><th class="col-type">Data Type</th><th>Purpose</th></tr>
+      <tr><td class="col-type">Message content</td><td>The free text you write to the founding team, and the replies sent to you. Stored on our own servers and readable by the founding team. Used only to respond to you, to operate and improve the app, and to enforce our Terms of Service.</td></tr>
+      <tr><td class="col-type">Message metadata</td><td>Timestamps for when a message was sent, delivered, and read, message ordering, and the account the conversation belongs to.</td></tr>
+      <tr><td class="col-type">Display name and account email</td><td>Shown to the founding team within the chat so we can identify you and reply. Your display name does not need to be your real name.</td></tr>
+      <tr><td class="col-type">Push notification token</td><td>Your device token, used solely to notify you when a reply arrives. You can disable chat notifications in your device settings.</td></tr>
+    </table>
+
+    <div class="callout warning">
+      Founder's Chat is private between you and the founding team, but it is <strong>not end-to-end encrypted</strong>. The founding team can read every message you send. Please do not send payment credentials, passwords, government identifiers, another person's personal information, or clinical records through Founder's Chat.<br><br>
+      What we send you in Founder's Chat is personal experience, encouragement, and motivation — <strong>never medical advice</strong>. See Section 12.2 of the Terms of Service.
+    </div>
+
+    <div class="callout">We never collect your precise location or your contacts, and we never collect any data unrelated to your use of Overcome. Founder's Chat currently supports text messages only — we do not request or access your photo library, camera, or microphone. Recovery data generated by the app is never stored in a form that could publicly identify your engagement with habit recovery content; message content you choose to write in Founder's Chat is stored as described in Section 2.5 above and is readable by the co-founders.</div>
+
+    <h3>2.6 Planned Features — Recovery Mentor Chat and Community Forum</h3>
+    <p>Two further features are planned and are <strong>not available today</strong>. Neither collects any data at present. We are describing them here so the change is not a surprise, and this Policy will be updated with full detail, and notice given under Section 10, before either goes live.</p>
+    <ul>
+      <li><strong>Recovery Mentor Chat</strong> — a private scheduled channel between you and a Recovery Mentor made available through Overcome, expected to support text, audio, and image messages. When it launches, a Recovery Mentor will be a recipient of your personal data. That is a change from Founder's Chat, where only the founding team can read your messages, and this Policy will record it explicitly before launch.</li>
+      <li><strong>Community Forum</strong> — a space where text and image posts you choose to publish will be <strong>visible to other users</strong>, who can comment on and discuss them. Content you post there is public within the app and is not covered by the privacy protections that apply to Founder's Chat.</li>
+    </ul>
+
+    <h3>2.7 Automated Calculations and Your Clarity Score</h3>
+    <p>Your <strong>Clarity Score</strong> is calculated automatically by the app, without human involvement, from your streak length, challenge completions, lifestyle inputs, and consistency of app use. It is displayed to you as a progress indicator.</p>
+    <p>Your <strong>weekly completion status</strong> is also recorded automatically, from your in-app challenge logs measured against the thresholds shown in the app. This one does carry a financial consequence: it determines whether you qualify for the Cashback Guarantee.</p>
+    <div class="callout">
+      Your Clarity Score does <strong>not</strong> determine Cashback Guarantee eligibility. Only completed weeks do. And whether the programme worked for you is judged by you, not by any score we calculate — see Terms of Service Section 5.1.
+    </div>
+    <p><strong>Human review.</strong> If you believe an automated calculation has recorded something other than what you actually did, you can ask a person to look at it. Email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with the subject line "Log Correction Request". A co-founder will review the underlying records and correct them where a technical fault is confirmed. If a cashback claim has already been rejected, the appeal route in Terms of Service Section 5.9 applies.</p>
+
+<!-- ============================================================
+     SWAP IN WHEN IMAGE AND AUDIO MESSAGES SHIP.
+     Replace the callout immediately above with the text below,
+     add rows to the 2.5 table for image and audio content,
+     and give users 7 days' notice per Section 10 first.
+
+     We never collect your precise location or your contacts, and we
+     never collect any data unrelated to your use of Overcome.
+     Founder's Chat supports text, image, and audio messages. Images
+     and audio are collected only when you actively choose to attach
+     or record them inside Founder's Chat — we do not scan your photo
+     library and we do not record audio in the background or at any
+     time you have not initiated. Recovery data generated by the app
+     is never stored in a form that could publicly identify your
+     engagement with habit recovery content; content you choose to
+     send in Founder's Chat is stored as described in Section 2.5 and
+     is readable by the co-founders.
+
+     Also required before that release:
+       - Play Data Safety: declare Photos/Videos and Audio collection
+       - Apple privacy labels: add User Content
+       - iOS Info.plist purpose strings for camera / photos / microphone
+       - Retention row below must cover attachments
+     ============================================================ -->
   </div>
 
   <!-- 3 -->
@@ -135,14 +219,22 @@
     <h2>3. How Long We Retain Your Data</h2>
     <table class="data-table">
       <tr><th class="col-type">Data</th><th>Retention Period</th></tr>
-      <tr><td class="col-type">Account and profile data</td><td>Duration of active account, plus 90 days after deletion request.</td></tr>
-      <tr><td class="col-type">Challenge completion and streak logs</td><td>Duration of active account. Deleted within 30 days of deletion request.</td></tr>
-      <tr><td class="col-type">Relapse logs</td><td>Duration of account. Deleted immediately upon deletion request.</td></tr>
-      <tr><td class="col-type">Wellbeing check-in ratings</td><td>Duration of account. Deleted within 30 days of deletion request.</td></tr>
+      <tr><td class="col-type">Account and profile data</td><td>Duration of active account. On a deletion request: removed from live systems within 30 days, and from backups within 90 days.</td></tr>
+      <tr><td class="col-type">Challenge completion and streak logs</td><td>Duration of active account. On a deletion request: live within 30 days, backups within 90 days.</td></tr>
+      <tr><td class="col-type">Relapse logs</td><td>Duration of active account. On a deletion request: live within 30 days, backups within 90 days.</td></tr>
+      <tr><td class="col-type">Wellbeing check-in ratings</td><td>Duration of active account. On a deletion request: live within 30 days, backups within 90 days.</td></tr>
+      <tr><td class="col-type">Clarity Score history</td><td>Duration of active account. On a deletion request: live within 30 days, backups within 90 days.</td></tr>
+      <tr><td class="col-type">Badge earn dates and IDs</td><td>Duration of active account. On a deletion request: live within 30 days, backups within 90 days.</td></tr>
+      <tr><td class="col-type">Founder's Chat messages</td><td>Duration of active account. On a deletion request: live within 30 days, backups within 90 days. This includes the copy held in the founding team's view of the conversation.</td></tr>
+      <tr><td class="col-type">Push notification tokens</td><td>Until you disable notifications, uninstall the app, or your account is deleted. Removed within 30 days of a deletion request.</td></tr>
+      <tr><td class="col-type">Device type, OS version, and session timestamps</td><td>Duration of active account. On a deletion request: live within 30 days, backups within 90 days.</td></tr>
+      <tr><td class="col-type">Firebase analytics data</td><td>Retained for up to 14 months under Firebase's standard retention policy. On a deletion request we submit a deletion instruction to Firebase for your app instance identifier; Google's own processing timelines then apply.</td></tr>
       <tr><td class="col-type">Payment and transaction records</td><td>7 years as required under Indian accounting and tax law. Cannot be deleted on request.</td></tr>
-      <tr><td class="col-type">Firebase analytics data</td><td>Anonymised after 14 months per Firebase's standard retention policy.</td></tr>
       <tr><td class="col-type">Support correspondence</td><td>2 years from the date of last communication.</td></tr>
     </table>
+    <div class="callout">
+      <strong>Live data and backups.</strong> When you request deletion, your data is removed from our live systems within 30 days. Encrypted backups are kept on a rolling cycle for disaster recovery and are overwritten within 90 days, so a copy may persist in a backup for up to that long. Backups are not accessible for ordinary use, are never used to restore a deleted account, and are only ever restored in the event of a system failure. This 30-day live / 90-day backup standard applies uniformly to every category of data listed above, except where Indian law requires longer retention.
+    </div>
   </div>
 
   <!-- 4 -->
@@ -152,11 +244,13 @@
     <ul>
       <li><strong>Descope</strong> — Authentication and user management. Receives email, display name, and credentials. No access to recovery data. <a href="https://www.descope.com/privacy" target="_blank">Privacy policy</a></li>
       <li><strong>Google Play Billing</strong> — Processes subscription purchases on Android. Payment data handled entirely by Google. <a href="https://policies.google.com/privacy" target="_blank">Privacy policy</a></li>
-      <li><strong>RevenueCat</strong> — Subscription state and purchase validation. Receives subscription status, transaction IDs, and anonymised user ID only. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy policy</a></li>
-      <li><strong>Google Firebase</strong> — Anonymised analytics and crash reporting. <a href="https://policies.google.com/privacy" target="_blank">Privacy policy</a></li>
+      <li><strong>RevenueCat</strong> — Subscription state and purchase validation. Receives subscription status, transaction IDs, and a pseudonymous user ID only. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy policy</a></li>
+      <li><strong>Google Firebase</strong> — Pseudonymised analytics and crash reporting. <a href="https://policies.google.com/privacy" target="_blank">Privacy policy</a></li>
       <li><strong>Vultr</strong> — Cloud hosting. Backend servers and database in Mumbai, India. <a href="https://www.vultr.com/legal/privacy/" target="_blank">Privacy policy</a></li>
+      <li><strong>DigitalOcean</strong> — Cloud hosting for the Founder's Chat service. Servers located in <strong>India</strong>. DigitalOcean is a hosting provider only and does not access or use your message content. <a href="https://www.digitalocean.com/legal/privacy-policy" target="_blank">Privacy policy</a></li>
     </ul>
     <p>We may disclose your data to law enforcement if required by applicable law.</p>
+    <p><strong>Founder's Chat message content is not shared with any of the parties listed above.</strong> It is stored on infrastructure we operate and is readable only by you and the founding team. DigitalOcean hosts the server but does not access message content. If this ever changes — for example when Recovery Mentor Chat launches and a mentor becomes a recipient — we will update this Policy and notify you under Section 10 before it takes effect.</p>
     <div class="callout">We will never share information that reveals your engagement with habit or addiction recovery content with any employer, insurer, advertiser, family member, or third party not listed above.</div>
   </div>
 
@@ -179,11 +273,13 @@
         <li>Tap <strong>"Request Account Deletion"</strong> on your Profile Page in the app. This opens a pre-filled email to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>.</li>
         <li>Send the email without modifying the subject line.</li>
         <li>We will confirm receipt within 48 hours.</li>
-        <li>Your account and all associated data will be permanently deleted within 30 days.</li>
+        <li>Your account is deactivated within 7 days of confirmation, so it can no longer be used or logged into.</li>
+        <li>Your data is permanently removed from our live systems within 30 days, and from encrypted backups within 90 days, as described in Section 3.</li>
+        <li>We send you a deletion confirmation once the live deletion is complete.</li>
       </ol>
       <p style="margin-top:12px; font-size:14px;">Alternatively, email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> directly with subject line <strong>"Data Deletion Request"</strong> and include your account email address.</p>
       <div class="retained">
-        <strong>What gets deleted:</strong> Account data, recovery data, streak logs, relapse logs, challenge completion logs, wellbeing ratings, and badge data.<br><br>
+        <strong>What gets deleted:</strong> Account data, recovery data, streak logs, relapse logs, challenge completion logs, Clarity Score history, wellbeing ratings, badge data, push notification tokens, device and session data, your Firebase analytics records, and your full Founder's Chat history — including the copy visible to the founding team.<br><br>
         <strong>What is retained:</strong> Payment and transaction records are retained for 7 years as required by Indian law and cannot be deleted on request.
       </div>
     </div>
@@ -211,11 +307,13 @@
     <h2>6. How We Protect Your Data</h2>
     <ul>
       <li>All data in transit is encrypted using HTTPS/TLS.</li>
+      <li>Backups are encrypted at rest and are accessible only to the co-founders.</li>
       <li>Our Vultr Mumbai backend is accessible only to authorised developers with strong authentication controls.</li>
+      <li>The DigitalOcean server in India running Founder's Chat is subject to the same access controls. Message content is encrypted in transit and is accessible only to you and the founding team. Founder's Chat is not end-to-end encrypted.</li>
       <li>Passwords are hashed by Descope and never stored in plain text.</li>
       <li>We do not store payment card details or financial credentials — handled entirely by Google Play Billing.</li>
-      <li>Recovery data is stored in a way that is not publicly linkable to your identity.</li>
-      <li>Challenge completion logs are immutable — they cannot be retroactively edited by users or administrators.</li>
+      <li>Recovery data generated by the app — streaks, relapse logs, challenge completions, and wellbeing ratings — is stored in a way that is not publicly linkable to your identity. Founder's Chat messages are necessarily linked to your account so that we can reply to you, and are readable by the founding team.</li>
+      <li>Challenge completion logs cannot be edited by users, and cannot be edited by us to your disadvantage. The only permitted change is correcting a verified technical fault so the record matches what you actually did.</li>
     </ul>
     <p>In the event of a data breach likely to cause harm, we will notify you and relevant authorities within timeframes required by DPDPA 2023.</p>
   </div>
@@ -224,9 +322,21 @@
   <div class="section">
     <h2>7. Data Storage and Location</h2>
     <p>Your personal data is primarily stored on Vultr servers in <strong>Mumbai, India</strong>, in compliance with DPDPA 2023 data localisation principles.</p>
+    <p><strong>DigitalOcean</strong> hosts the Founder's Chat service. Your message content and chat metadata are stored on DigitalOcean servers located in <strong>India</strong>, in line with the same DPDPA 2023 data localisation principles that apply to the rest of your data. Founder's Chat message content is not transferred outside India.</p>
     <p><strong>Firebase (Google)</strong> is configured to the <strong>asia-south1 (Mumbai)</strong> region. Some data may be processed on Google's global infrastructure per Google's data processing terms.</p>
     <p><strong>RevenueCat</strong> may process subscription data on servers outside India. See revenuecat.com/privacy for details.</p>
-    <p><strong>Descope</strong> processes authentication data on servers in the <strong>United States</strong>. Your email address and hashed password are transferred to and stored in the United States on account creation and login. Descope maintains SOC 2 Type II compliance. By creating an account, you consent to this transfer. See descope.com/privacy for details.</p>
+    <p><strong>Descope</strong> processes authentication data on servers in the <strong>United States</strong>. Your email address and hashed password are transferred to and stored in the United States on account creation and login. Descope maintains SOC 2 Type II compliance. See descope.com/privacy for details.</p>
+    <p>Under the DPDPA 2023, consent must be free, specific, informed, unconditional, and given by clear affirmative action. We therefore ask you to consent to this transfer <strong>separately, at the point of sign-up</strong>, by an explicit action — not by your continued use of the app and not by acceptance of this Policy as a whole. You can withdraw that consent at any time under Section 5.4, though because authentication depends on Descope, withdrawing it means we can no longer maintain your account.</p>
+    <p>India does not currently restrict transfers of personal data to the United States. Section 16 of the DPDPA operates on a restricted-country basis, and the United States is not a restricted country at the date of this Policy.</p>
+<!-- ============================================================
+     DEPENDENCY: the paragraph above describes a separate, explicit
+     consent action at sign-up. This must exist in the app before
+     this version is published — an unticked checkbox on the sign-up
+     screen, with its own plain-language line about the US transfer,
+     and a timestamped record of the user's action stored server-side
+     so consent can be evidenced later. Do not publish this wording
+     until that flow is live.
+     ============================================================ -->
   </div>
 
   <!-- 8 -->
@@ -240,10 +350,10 @@
     <h2>9. Analytics, Tracking, and Cookies</h2>
 
     <h3>9.1 Firebase Analytics</h3>
-    <p>Anonymised, aggregated usage data — screen views, session length, feature usage. Does not identify you personally. Configured to asia-south1 (Mumbai).</p>
+    <p>Pseudonymised usage data — screen views, session length, and feature usage, recorded against a Firebase app instance identifier. It does not carry your name or email address, but it is not anonymous: it can be linked back to your device and therefore to you, and it is treated as personal data under this Policy. Configured to asia-south1 (Mumbai).</p>
 
     <h3>9.2 Firebase Crashlytics</h3>
-    <p>Automatic crash reports including device type, OS version, and error stack traces. Used exclusively to fix technical issues.</p>
+    <p>Automatic crash reports including device type, OS version, device identifiers, and error stack traces. Used exclusively to fix technical issues. Like Firebase Analytics, this data is pseudonymised rather than anonymous.</p>
 
     <h3>9.3 RevenueCat</h3>
     <p>Subscription lifecycle events (purchases, renewals, cancellations, refunds). No access to recovery data, relapse logs, or onboarding responses.</p>
@@ -255,7 +365,14 @@
     <p>We do not use advertising SDKs, ad networks, or marketing trackers. We do not serve ads. We do not permit advertisers to access your data.</p>
 
     <h3>9.6 Limiting Analytics Collection</h3>
-    <p>Enable "Opt out of Ads Personalisation" in Android device settings (Settings &gt; Google &gt; Ads) to limit Firebase Analytics collection. Does not affect app functionality.</p>
+    <p>We want to be accurate about what the available controls actually do.</p>
+    <ul>
+      <li><strong>Delete advertising ID</strong> (Android: Settings &gt; Google &gt; All services &gt; Ads) removes the identifier used for advertising personalisation. Since we run no ads and use no advertising SDKs, this has limited effect on us, but it does prevent that identifier being associated with analytics events.</li>
+      <li>Neither this setting nor any other device setting fully disables Firebase Analytics. There is currently no in-app toggle to switch analytics off.</li>
+      <li>To stop Firebase Analytics collection entirely, you would need to uninstall the app or request account deletion under Section 5.3.</li>
+      <li>You can request deletion of the analytics data already held about you at any time by emailing us, without deleting your account.</li>
+    </ul>
+    <p>We are evaluating an in-app analytics opt-out. If we add one, we will update this Section.</p>
   </div>
 
   <!-- 10 -->
@@ -283,6 +400,7 @@
   </div>
 
   <div class="doc-footer">
+    <a class="back-link" href="index.html">&#8592; Back to all legal documents</a><br>
     Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
     <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
     Bengaluru, Karnataka, India &nbsp;|&nbsp;

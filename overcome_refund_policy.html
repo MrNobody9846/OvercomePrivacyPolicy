@@ -69,27 +69,56 @@
       .data-table { font-size: 13px; }
       .data-table th, .data-table td { padding: 8px 10px; }
     }
+
+    /* ── shared site nav ── */
+    .site-nav { background: #1a1a1a; color: #fff; padding: 0 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .site-nav-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 0; }
+    .site-nav a.brand { color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.02em; font-size: 15px; }
+    .site-nav a.brand:hover { color: #e0e0e0; text-decoration: none; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-nav li { margin: 0; }
+    .site-nav li a { color: #bbb; text-decoration: none; font-size: 13px; }
+    .site-nav li a:hover { color: #fff; text-decoration: none; }
+    .site-nav li a.current { color: #fff; font-weight: 600; }
+    .back-link { display: inline-block; margin-bottom: 8px; font-size: 13px; color: #2E74B5; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Main">
+    <div class="site-nav-inner">
+      <a class="brand" href="index.html">&#8592; Overcome Legal</a>
+      <ul>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+          <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
+          <li><a href="overcome_refund_policy.html" class="current">Refund Policy</a></li>
+          <li><a href="overcome_delete_account.html">Delete Account</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+  </nav>
 <div class="wrapper">
+
+  <a class="back-link" href="index.html">&#8592; All legal documents</a>
 
   <div class="doc-header">
     <div class="app-name">Overcome: Dopamine Reset for Men</div>
     <h1>Refund Policy</h1>
-    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 20 April 2026</div>
+    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 24 August 2026</div>
   </div>
 
   <div class="callout green">
-    Overcome offers a performance-based 90% Cashback Guarantee on both subscription plans. This page explains exactly how it works, what qualifies, and how to claim. Read it before you purchase — we want you to know exactly what you're signing up for.
+    Overcome is currently available on Android via Google Play. We offer a performance-based 90% Cashback Guarantee on both subscription plans. This page explains exactly how it works, what qualifies, and how to claim. Read it before you purchase — we want you to know exactly what you're signing up for.
   </div>
 
   <!-- 1. Our Philosophy -->
   <div class="section">
     <h2>1. Our Refund Philosophy</h2>
     <p>We don't offer unconditional refunds. What we offer is better: a guarantee that is tied to genuine effort.</p>
-    <p>If you show up every week, complete your challenges, and still feel no improvement after the full programme — we'll give you 90% of your money back. No awkward emails, no hoops to jump through beyond what's tracked automatically in the app.</p>
-    <p>The 10% we retain covers platform fees charged by Google Play and Apple App Store, and the cost of running the programme infrastructure. This is standard across performance guarantees and is non-negotiable.</p>
+    <p>If you show up every week, complete your challenges, and still feel no improvement after the full programme — we'll give you 90% of your money back. Beyond what the app tracks automatically, there are no hoops to jump through.</p>
+    <p><strong>You decide whether you improved.</strong> Whether the programme meaningfully helped you is judged entirely by your own standards. We do not define improvement, do not measure it, and do not assess it. We will not ask you to justify your answer, will not request evidence, and will not reject a claim because we disagree with your view of your own progress. Your Clarity Score, streak length, and check-in ratings play no part in this and are never used to second-guess you.</p>
+    <p>There is exactly one objective test: did you complete every required week? If you did, and you tell us it didn't meaningfully help, the claim is approved.</p>
+    <p>The 10% we retain covers platform fees charged by Google Play and the cost of running the programme infrastructure. It is not refundable as part of a cashback claim, though this does not limit any refund you may be entitled to on another basis or under applicable consumer law.</p>
     <div class="callout">
       The guarantee exists because we believe in the programme. Users who genuinely complete every required week almost never feel no improvement. If you do, we don't deserve your money.
     </div>
@@ -117,7 +146,7 @@
         <div class="plan-row"><span class="label">Weeks required</span><span class="value">All 26 of 26</span></div>
         <div class="plan-row"><span class="label">Claim window</span><span class="value">14 days after day 180</span></div>
         <div class="plan-row"><span class="label">Cashback</span><span class="value">90% of amount paid</span></div>
-        <div class="plan-row"><span class="label">Auto-renewal</span><span class="value">Half yearly (every 6 months)</span></div>
+        <div class="plan-row"><span class="label">Auto-renewal</span><span class="value">Every 180 days</span></div>
       </div>
     </div>
   </div>
@@ -130,8 +159,10 @@
     <p>A week is only complete when <strong>every challenge</strong> in that week has individually met its threshold. Partially completing some challenges does not count as a completed week.</p>
     <p>Tier 3 surprise challenges are excluded from the weekly completion calculation. Only Tier 1 and Tier 2 challenges count toward guarantee eligibility. Tier 3 challenges disappear on the day they appear and are not tracked for completion purposes.</p>
     <div class="callout warning">
-      Completion is determined solely by in-app logs. No screenshots, external records, or manual submissions are accepted. Completion logs are immutable — they cannot be retroactively edited by users or administrators.
+      Completion is determined solely by in-app logs. No screenshots, external records, or manual submissions are accepted. Once a day is recorded you cannot change it, and neither can we — not at your request, and not on our own initiative to your disadvantage.
     </div>
+    <p><strong>One exception: technical faults on our side.</strong> If a software bug, failed sync, server outage, or data migration error caused the app to record something other than what you actually did, we will correct the record so it reflects your real activity. Corrections only ever restore what genuinely happened — we will not add completions you did not earn, and a correction can never reduce one you did. Email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with the subject line "Log Correction Request" as soon as you notice a problem, and in any event before your claim window closes.</p>
+    <p>Your <strong>Clarity Score</strong> does not affect eligibility. Only completed weeks do.</p>
   </div>
 
   <!-- 4. How to Claim -->
@@ -141,11 +172,15 @@
     <ol class="step-list">
       <li>Open the app and navigate to your <strong>Profile Page</strong>.</li>
       <li>Tap the <strong>"Claim Cashback"</strong> button. This button only appears when your guarantee period has ended, all required weeks are marked complete, and you are within the 14-day claim window.</li>
-      <li>The button opens a <strong>pre-filled email</strong> addressed to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>. Do not modify the subject line or body of the email.</li>
+      <li>The button opens a <strong>pre-filled email</strong> addressed to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>. Please leave the subject line and pre-filled details intact so we can find your account — you're welcome to add your own comments below them. If anything is missing or unclear we'll email you to ask, rather than rejecting the claim.</li>
       <li>Send the email.</li>
       <li>The Overcome team will <strong>verify your completion data</strong> against backend records within 2 business days.</li>
-      <li>If approved, your <strong>cashback is processed within 7 to 10 business days</strong> via your original payment method (Google Play or Apple App Store).</li>
+      <li>If approved, your <strong>cashback is processed within 7 to 10 business days</strong> as a partial refund through Google Play to your original payment method. Processing times at the payment provider are outside our control.</li>
+      <li>If your claim is rejected, we will tell you which condition applied and how to appeal — see Section 9.</li>
     </ol>
+    <div class="callout warning">
+      Claims must be submitted by email. A cashback claim raised through Founder's Chat is not a valid submission and does not preserve your 14-day claim window. See Terms of Service Section 12.5.
+    </div>
     <div class="callout">
       If you do not see the "Claim Cashback" button after your programme ends, it means either the completion threshold has not been met or the claim window has passed. Email us at overcomeapp0@gmail.com if you believe this is an error.
     </div>
@@ -158,13 +193,26 @@
     <ul class="disqualify-list">
       <li>All required weeks were not completed — 13/13 for The 90-Day Reset, 26/26 for The 180-Day Full Reset</li>
       <li>The claim was submitted outside the 14-day claim window after the guarantee period ended</li>
-      <li>Challenge completion data was found to be falsified, manipulated, or artificially inflated</li>
+      <li>Challenge completion data was falsified, as defined below</li>
       <li>Multiple accounts were created to circumvent the guarantee</li>
-      <li>The user was in breach of the Terms of Service at the time of the claim</li>
-      <li>A chargeback was already filed with Google Play or Apple App Store for the same subscription period</li>
+      <li>There was a material breach of the Terms of Service, unresolved at the time of the claim</li>
+      <li>A chargeback was already filed with Google Play for the same subscription period</li>
       <li>More than one claim was submitted in the same subscription period</li>
-      <li>The subscription was cancelled before the plan ran to its full end date</li>
+      <li>Access to the plan ended early — for example through a refund or termination — so the programme never ran its full length</li>
     </ul>
+
+    <h3>What "falsified" means here</h3>
+    <p>We use this term for deliberate conduct intended to record completions you did not actually perform:</p>
+    <ul>
+      <li>Changing your device's date or time to log activity for days that hadn't happened, or to reopen days that had closed</li>
+      <li>Recording completions by any means other than normal use of the app — modified builds, emulators used to automate input, scripted input, or direct calls to our servers</li>
+      <li>Using more than one account, or more than one device, to accumulate completions for a single claim</li>
+      <li>Any other deliberate act intended to make the record show something other than what you did</li>
+    </ul>
+    <p>Genuine mistakes, forgetting to log a day, connectivity problems, and technical faults on our side are <strong>not</strong> falsification. A wrong record caused by a fault is a correction request under Section 3, not a disqualification.</p>
+    <div class="callout">
+      We will only reject a claim on falsification grounds where we hold specific evidence of the conduct above. We'll tell you what we found and give you a chance to respond under Section 9 before the rejection is final. We will not reject on suspicion, on activity merely looking unusual, or because your completion pattern seems too consistent.
+    </div>
   </div>
 
   <!-- 6. What Is Not Covered -->
@@ -172,12 +220,14 @@
     <h2>6. What Is Not Covered</h2>
     <p>The following are not eligible for a refund or cashback under any circumstances:</p>
     <ul>
-      <li>Subscriptions cancelled mid-period where the plan did not run to its full end date</li>
-      <li>The 10% retained from any approved cashback claim — this is non-refundable</li>
-      <li>Subscription periods where a chargeback has already been initiated via Google Play or Apple App Store</li>
-      <li>Requests made after the 14-day claim window has closed, regardless of reason</li>
-      <li>Claims based on dissatisfaction with individual features rather than overall programme results</li>
+      <li>Subscription periods where access ended early, so the programme never ran its full length</li>
+      <li>The 10% retained from an approved cashback claim, as part of that claim</li>
+      <li>Subscription periods where a chargeback has already been initiated via Google Play</li>
+      <li>Requests made after the 14-day claim window has closed, except where the window was paused by an appeal under Section 9</li>
     </ul>
+    <div class="callout green">
+      <strong>Turning off auto-renewal does not disqualify you.</strong> On Google Play, cancelling a subscription stops the next payment but leaves your access running to the end of the period you already paid for. If you switch off auto-renewal on day 10 and go on to complete all required weeks, you remain fully eligible. What disqualifies a claim is the programme not running its full length — for instance because the subscription was refunded or the account was terminated partway through.
+    </div>
     <div class="callout warning">
       Overcome does not offer no-questions-asked refunds. If you are unsure about committing to a plan, we recommend starting with The 90-Day Reset, which has a shorter commitment period and the same guarantee terms.
     </div>
@@ -189,9 +239,8 @@
     <p>You may cancel your subscription at any time through your app store subscription settings. Cancellation prevents future auto-renewal but does not entitle you to a refund for the current billing period.</p>
     <ul>
       <li><strong>Android:</strong> Google Play Store &gt; Account &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
-      <li><strong>iOS:</strong> Settings &gt; Apple ID &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
     </ul>
-    <p>Cancelling your subscription also disqualifies you from the Cashback Guarantee for that subscription period, as the plan must run to its full end date to be eligible.</p>
+    <p>Cancelling stops your subscription renewing. It does not end your current period early, and it does not remove your Cashback Guarantee eligibility — you keep access until the period you paid for runs out, and if you complete every required week within it, you can still claim.</p>
   </div>
 
   <!-- 8. Contact -->
@@ -203,16 +252,38 @@
       <li><strong>Named contact:</strong> Digvijay Prashant Bhosale</li>
       <li><strong>Subject line for refund queries:</strong> "Refund Query — [your registered email]"</li>
       <li><strong>Subject line for disputed rejections:</strong> "Disputed Claim — [your registered email]"</li>
-      <li><strong>Response time:</strong> within 2 business days for cashback queries, within 5 business days for disputes</li>
+      <li><strong>Formal appeals:</strong> subject line "Cashback Appeal" — see Section 9 for the process and timelines</li>
+      <li><strong>Response time:</strong> within 2 business days for cashback queries, within 5 business days for general disputes, within 10 business days for a formal appeal decision</li>
     </ul>
-    <p>This Refund Policy is governed by the laws of India. Disputes are subject to the jurisdiction of courts in Bengaluru, Karnataka, India. For the complete terms governing your use of Overcome, refer to our <a href="tos.html">Terms of Service</a> and <a href="privacy_policy.html">Privacy Policy</a>.</p>
+    <p>This Refund Policy is governed by the laws of India. Disputes are subject to the jurisdiction of courts in Bengaluru, Karnataka, India. This does not affect your rights under the <strong>Consumer Protection Act 2019</strong> — if you are a consumer, you may bring a complaint before the consumer commission having jurisdiction where you reside or work, and nothing here prevents you from doing so.</p>
+    <p>For the complete terms governing your use of Overcome, refer to our <a href="overcome_terms_of_service_html.html">Terms of Service</a> and <a href="privacy_policy.html">Privacy Policy</a>. Where this Refund Policy and Section 5 of the Terms of Service differ, the Terms of Service prevail.</p>
+  </div>
+
+  <div class="section">
+    <h2>9. Appeals</h2>
+    <p>If your claim is rejected, or a correction request under Section 3 is refused, you can appeal.</p>
+    <ol class="step-list">
+      <li>Email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with the subject line <strong>"Cashback Appeal"</strong> within <strong>14 days</strong> of our decision.</li>
+      <li>Tell us why you think it was wrong. Include anything you consider relevant — no evidence is required.</li>
+      <li>A named co-founder who did not make the original decision reviews it where possible, and the other co-founder where it isn't.</li>
+      <li>We respond with a final decision and our reasons within <strong>10 business days</strong>.</li>
+    </ol>
+    <p>Submitting an appeal pauses your claim window until the appeal is decided. Nothing here limits your rights under applicable consumer law.</p>
+  </div>
+
+  <div class="section">
+    <h2>10. Changing Plans Mid-Period</h2>
+    <p>If you move from The 90-Day Reset to The 180-Day Full Reset during an active period, weeks you have already completed carry across and count toward the longer plan. Your guarantee period and claim window are recalculated from the new plan's start date.</p>
+    <p>If you move to a shorter plan, your guarantee period ends at the end of that plan's duration, and only weeks falling inside it count.</p>
+    <p>Where a plan change changes the amount paid, cashback is calculated on the total you actually paid across the combined period, less anything already refunded.</p>
   </div>
 
   <div class="doc-footer">
+    <a class="back-link" href="index.html">&#8592; Back to all legal documents</a><br>
     Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
     <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
     Bengaluru, Karnataka, India &nbsp;|&nbsp;
-    Effective 20 March 2026
+    Effective 20 March 2026 &nbsp;|&nbsp; Updated 24 August 2026
   </div>
 
 </div>

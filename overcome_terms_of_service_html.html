@@ -58,15 +58,42 @@
       .data-table { font-size: 13px; }
       .data-table th, .data-table td { padding: 8px 10px; }
     }
+
+    /* ── shared site nav ── */
+    .site-nav { background: #1a1a1a; color: #fff; padding: 0 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .site-nav-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 0; }
+    .site-nav a.brand { color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.02em; font-size: 15px; }
+    .site-nav a.brand:hover { color: #e0e0e0; text-decoration: none; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-nav li { margin: 0; }
+    .site-nav li a { color: #bbb; text-decoration: none; font-size: 13px; }
+    .site-nav li a:hover { color: #fff; text-decoration: none; }
+    .site-nav li a.current { color: #fff; font-weight: 600; }
+    .back-link { display: inline-block; margin-bottom: 8px; font-size: 13px; color: #2E74B5; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Main">
+    <div class="site-nav-inner">
+      <a class="brand" href="index.html">&#8592; Overcome Legal</a>
+      <ul>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+          <li><a href="overcome_terms_of_service_html.html" class="current">Terms of Service</a></li>
+          <li><a href="overcome_refund_policy.html">Refund Policy</a></li>
+          <li><a href="overcome_delete_account.html">Delete Account</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+  </nav>
 <div class="wrapper">
+
+  <a class="back-link" href="index.html">&#8592; All legal documents</a>
 
   <div class="doc-header">
     <div class="app-name">Overcome: Dopamine Reset for Men</div>
     <h1>Terms of Service</h1>
-    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 20 April 2026</div>
+    <div class="meta">Effective Date: 20 March 2026 &nbsp;|&nbsp; Last Updated: 24 August 2026</div>
   </div>
 
   <div class="callout">
@@ -79,9 +106,10 @@
     <p>This Terms of Service agreement is between:</p>
     <ul>
       <li><strong>You</strong> — the individual accessing or using the Overcome application ("User", "you", or "your"), and</li>
-      <li><strong>Us</strong> — Overcome, a habit-building mobile application developed and operated by its co-founders as independent developers based in Bengaluru, Karnataka, India.</li>
+      <li><strong>Us</strong> — Overcome, a habit-building mobile application developed and operated by its co-founders, <strong>Digvijay Prashant Bhosale</strong> and <strong>Adari Yashwanth</strong>, as independent developers based in Bengaluru, Karnataka, India ("Overcome", "we", "us", or "our").</li>
     </ul>
-    <p>By downloading, installing, or using Overcome on Android (Google Play) or iOS (App Store), you enter into a legally binding agreement under the terms set out below.</p>
+    <p>By downloading, installing, or using Overcome, you enter into a legally binding agreement under the terms set out below.</p>
+    <p><strong>Platform availability.</strong> Overcome is currently available on <strong>Android via Google Play only</strong>. Where these Terms refer to the Apple App Store or iOS, those references apply only if and when Overcome becomes available on that platform, and we will update these Terms before that happens.</p>
     <p>You must be at least <strong>18 years of age</strong> to use Overcome. By using the app, you confirm that you meet this requirement.</p>
   </div>
 
@@ -98,6 +126,7 @@
       <li>An achievement badge system with 34 science-backed badges</li>
       <li>Daily wellbeing check-in functionality</li>
       <li>Progress tracking and visualisation tools</li>
+      <li>Founder's Chat — a private text channel between you and the Overcome founding team, as described in Section 12.1</li>
     </ul>
     <h3>2.2 What Overcome Is Not</h3>
     <div class="callout warning">
@@ -108,6 +137,7 @@
       <li>A content blocker or parental control tool</li>
       <li>A pornography filtering or monitoring service</li>
       <li>A crisis intervention or emergency mental health service</li>
+      <li>A counselling, coaching, or therapy service through any channel, including Founder's Chat</li>
       <li>A guaranteed cure or treatment for any condition, disorder, or addiction</li>
     </ul>
   </div>
@@ -116,7 +146,8 @@
   <div class="section">
     <h2>3. Eligibility and Account</h2>
     <h3>3.1 Age Requirement</h3>
-    <p>You must be 18 years of age or older to create an account. By registering, you confirm this. We reserve the right to terminate accounts found to belong to users under 18 without notice or refund.</p>
+    <p>You must be 18 years of age or older to create an account. By registering, you confirm this.</p>
+    <p>Where we find that an account belongs to a person under 18, we will terminate it and delete the associated data. We will also request a refund of the unused portion of any subscription period through Google Play. No Cashback Guarantee claim can be made on such an account, and any claim already submitted will be void.</p>
     <h3>3.2 Account Responsibility</h3>
     <p>You agree to:</p>
     <ul>
@@ -136,18 +167,19 @@
     <table class="data-table">
       <tr><th class="col-left">Plan</th><th>Duration</th><th>Guarantee Window</th><th>Auto-Renewal</th></tr>
       <tr><td class="col-left"><strong>The 90-Day Reset</strong></td><td>90 days (13 weeks)</td><td>Full 90 days</td><td>Every 90 days</td></tr>
-      <tr><td class="col-left"><strong>The 180-Day Full Reset</strong></td><td>180 days (26 weeks)</td><td>Full 180 days</td><td>Annually (365 days)</td></tr>
+      <tr><td class="col-left"><strong>The 180-Day Full Reset</strong></td><td>180 days (26 weeks)</td><td>Full 180 days</td><td>Every 180 days</td></tr>
     </table>
-    <p>All prices are in Indian Rupees (INR) inclusive of applicable taxes, displayed in the app at time of purchase. Prices may change but will not affect active periods already paid for.</p>
+    <p>Each plan renews on the same cycle as its duration: the 90-Day Reset renews every 90 days, and the 180-Day Full Reset renews every 180 days. Your access period and your billing period are always the same length.</p>
+    <p>All prices are in Indian Rupees (INR) inclusive of applicable taxes, displayed in the app at time of purchase. Prices may change but will not affect active periods already paid for. Where a price increase applies to your next renewal, Google Play will notify you in advance and you may cancel before it takes effect.</p>
+    <p><strong>Promotional pricing</strong> means any introductory offer, discount, coupon, launch price, or reduced rate applied to your purchase. Where you buy at a promotional price, all references in these Terms to "the amount you paid" mean the discounted amount actually charged to you, not the standard price.</p>
 
     <h3>4.2 Billing and Auto-Renewal</h3>
-    <p>Subscriptions are billed in advance. Unless cancelled before renewal, your subscription auto-renews at the then-current price. All billing is managed by Google Play (Android) or Apple App Store (iOS). Overcome does not store payment card details or financial credentials.</p>
+    <p>Subscriptions are billed in advance. Unless cancelled before renewal, your subscription auto-renews at the then-current price for the same period length. All billing is managed by Google Play. Overcome does not hold your money, does not store payment card details or financial credentials, and cannot charge or refund you directly — every payment and every refund passes through Google Play.</p>
 
     <h3>4.3 Cancellation</h3>
     <p>Cancel anytime through your app store subscription settings:</p>
     <ul>
       <li><strong>Android:</strong> Google Play Store &gt; Account &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
-      <li><strong>iOS:</strong> Settings &gt; Apple ID &gt; Subscriptions &gt; Overcome &gt; Cancel</li>
     </ul>
     <p>Cancellation prevents future renewals but does not entitle you to a refund for the current period, except as provided in Section 5.</p>
 
@@ -163,12 +195,17 @@
     </div>
 
     <h3>5.1 How the Guarantee Works</h3>
-    <p>If you complete all required challenge weeks across your guarantee period and do not experience any meaningful improvement, you may claim <strong>90% of the amount you paid</strong> back. The remaining 10% is non-refundable and covers platform fees and programme infrastructure costs.</p>
+    <p>If you complete all required challenge weeks across your guarantee period and do not experience any meaningful improvement, you may claim <strong>90% of the amount you paid</strong> back. The remaining 10% covers platform fees and programme infrastructure costs.</p>
+    <p><strong>You decide whether you improved.</strong> Whether you experienced meaningful improvement is judged entirely by your own standards. We do not define improvement, do not measure it, and do not assess it. We will not ask you to justify your answer, will not request evidence, and will not reject a claim on the basis that we disagree with your view of your own progress. Your Clarity Score, streak length, and check-in ratings are not used to evaluate improvement and have no bearing on this part of the claim.</p>
+    <p>In practice this means there is exactly one objective test: did you complete every required week? If you did, and you tell us the programme did not meaningfully help you, the claim is approved.</p>
 
     <h3>5.2 What Counts as a Completed Week</h3>
     <p>A <strong>"completed week"</strong> is defined as a week in which every assigned challenge has met its individual completion threshold as recorded automatically by the app. Different challenges carry different thresholds — some require 3 out of 7 days, some 4 out of 7, and some 5 out of 7. These thresholds are displayed in the app for each challenge.</p>
     <p>Tier 3 surprise challenges are excluded from the weekly completion calculation. Only Tier 1 and Tier 2 challenges count toward guarantee eligibility. Tier 3 challenges disappear on the day they appear and are not tracked for completion purposes.</p>
-    <p>Completion is determined solely by in-app logs. No external proof is required or accepted. Completion data is immutable — logs cannot be retroactively edited by users or administrators.</p>
+    <p>Completion is determined solely by in-app logs. No external proof is required or accepted.</p>
+    <p><strong>Completion logs cannot be edited by users.</strong> Once a day is recorded, you cannot change it, and neither the founding team nor anyone else can alter it at your request or at our own initiative to your disadvantage. This protects the integrity of the guarantee for everyone.</p>
+    <p><strong>Correction of technical faults.</strong> The single exception is a verified technical fault on our side — for example a software bug, a failed synchronisation, a server outage, or a data migration error that caused the app to record something other than what you actually did. In that case we will correct the record so that it reflects your actual activity. Corrections are only ever made to reflect what genuinely happened; we will not add completions you did not earn, and a correction cannot reduce a completion you did earn. To report a suspected fault, email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with the subject line "Log Correction Request" as soon as you notice it, and in any event before your claim window closes.</p>
+    <p><strong>Clarity Score.</strong> Your Clarity Score is calculated automatically by the app from your streak, challenge completions, lifestyle inputs, and consistency. It is a progress indicator only. It does not determine Cashback Guarantee eligibility, which depends solely on completed weeks as described in this Section. See Privacy Policy Section 2.7 for how this automated calculation works and how to request human review.</p>
 
     <h3>5.3 Completion Requirements by Plan</h3>
     <table class="data-table">
@@ -179,16 +216,19 @@
     <p>All weeks in the guarantee period must be completed. A single incomplete week disqualifies the claim.</p>
 
     <h3>5.4 Cashback Amounts</h3>
-    <p>The cashback is 90% of the subscription price paid at time of purchase, regardless of promotional pricing. The 10% retained is non-refundable under all circumstances.</p>
+    <p>The cashback is 90% of the amount you actually paid at time of purchase, including where that amount reflects promotional pricing as defined in Section 4.1.</p>
+    <p>The 10% retained is not refundable as part of a Cashback Guarantee claim. This does not limit any refund you may be entitled to on another basis — including a refund under Section 13.2, a Google Play refund, or any right you have under applicable consumer law.</p>
 
     <h3>5.5 Claim Process</h3>
     <ol>
       <li>Navigate to your <strong>Profile Page</strong> within the app.</li>
       <li>Tap the <strong>"Claim Cashback"</strong> button — visible only when your guarantee period has ended, all required weeks are complete, and you are within the claim window.</li>
-      <li>The button opens a pre-filled email to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>. Do not modify the subject line or body.</li>
+      <li>The button opens a pre-filled email to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>. Please leave the subject line and the pre-filled details intact, as they help us locate your account. You are welcome to add your own comments below them. If anything is missing or unclear we will email you to ask, rather than rejecting the claim.</li>
       <li>Send the email.</li>
       <li>The Overcome team will verify completion data within <strong>2 business days</strong>.</li>
-      <li>If approved, cashback is processed within <strong>7 to 10 business days</strong> via your original payment method.</li>
+      <li>Claims must be submitted by email. Cashback claims raised through Founder's Chat are not valid submissions — see Section 12.5.</li>
+      <li>If approved, cashback is processed within <strong>7 to 10 business days</strong> as a partial refund through Google Play to your original payment method. Processing times at the payment provider are outside our control.</li>
+      <li>If your claim is rejected, we will tell you which condition in Section 5.7 applied and how to appeal under Section 5.9.</li>
     </ol>
 
     <h3>5.6 Claim Windows</h3>
@@ -204,12 +244,23 @@
     <ul>
       <li>All required weeks not completed (13/13 for 90-Day Reset, 26/26 for 180-Day Full Reset)</li>
       <li>Claim submitted outside the 14-day claim window</li>
-      <li>Falsified, manipulated, or artificially inflated challenge completion data</li>
+      <li>Falsified completion data, as defined below</li>
       <li>Multiple accounts created to circumvent the guarantee</li>
-      <li>User in breach of any ToS provision at time of claim</li>
-      <li>Chargeback already filed with Google Play or Apple App Store for the same period</li>
+      <li>A material breach of these Terms that is unresolved at the time of the claim</li>
+      <li>Chargeback already filed with Google Play for the same period</li>
       <li>More than one claim submitted per subscription period</li>
     </ul>
+    <p><strong>What "falsified completion data" means.</strong> We use this term to describe deliberate conduct intended to record completions you did not actually perform. Specifically, it means:</p>
+    <ul>
+      <li>Altering your device's date or time settings to log activity for days that had not occurred, or to reopen days that had closed</li>
+      <li>Recording completions by any means other than normal use of the app — including modified or tampered builds, emulators used to automate input, scripted or automated input, or direct calls to our servers</li>
+      <li>Using more than one account, or more than one device, to accumulate completions for a single claim</li>
+      <li>Any other deliberate act intended to make the record show something other than what you did</li>
+    </ul>
+    <p>Genuine mistakes, forgetting to log a day, connectivity problems, and technical faults on our side are <strong>not</strong> falsification. If your record is wrong because of a fault, that is a correction request under Section 5.2, not a disqualification.</p>
+    <div class="callout">
+      We will only reject a claim on falsification grounds where we hold specific evidence of the conduct described above. We will tell you what we found and give you the opportunity to respond under Section 5.9 before the rejection becomes final. We will not reject a claim on suspicion, on a general sense that activity looks unusual, or because your completion pattern seems too consistent.
+    </div>
 
     <h3>5.8 Guarantee Limitations</h3>
     <p>The guarantee applies only to the current active subscription period. It does not apply to cancelled subscriptions where the plan did not run to its full end date. The guarantee is not transferable.</p>
@@ -217,6 +268,21 @@
       The Cashback Guarantee is not an unconditional money-back guarantee. It is a reward for genuine, sustained engagement. Users who complete every required week and still feel no improvement are the intended beneficiaries. Users who did not fully engage are not eligible.
     </div>
   </div>
+
+    <h3>5.9 Appeals</h3>
+    <p>If your claim is rejected, or if a correction request under Section 5.2 is refused, you may appeal.</p>
+    <ol>
+      <li>Email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with the subject line "Cashback Appeal" within <strong>14 days</strong> of receiving our decision.</li>
+      <li>Tell us why you think the decision was wrong. You may include anything you consider relevant, though no evidence is required.</li>
+      <li>Your appeal will be reviewed by a named co-founder who did not make the original decision where that is possible, and by the other co-founder where it is not.</li>
+      <li>We will respond with a final decision, and our reasons, within <strong>10 business days</strong>.</li>
+    </ol>
+    <p>Submitting an appeal pauses the claim window in Section 5.6 until the appeal is decided. Nothing in this Section limits your right to pursue the matter under Section 15 or under applicable consumer law.</p>
+
+    <h3>5.10 Changing Plans Mid-Period</h3>
+    <p>If you move from the 90-Day Reset to the 180-Day Full Reset during an active period, the weeks you have already completed carry across and count toward the longer plan's requirement. Your guarantee period, and the claim window in Section 5.6, are recalculated from the start date of the new plan.</p>
+    <p>If you move from a longer plan to a shorter one, your guarantee period ends at the end of the shorter plan's duration, and only the weeks falling within that period count.</p>
+    <p>Where a plan change results in a different amount paid, cashback is calculated on the total you actually paid across the combined period, less any amount already refunded to you.</p>
 
   <!-- 6 -->
   <div class="section">
@@ -232,6 +298,9 @@
       <li>You will maintain the confidentiality of your account credentials</li>
       <li>You understand Overcome is a habit-building tool and not a medical service</li>
       <li>You will not hold Overcome responsible for outcomes resulting from your use or non-use of the app</li>
+      <li>You will use Founder's Chat, and any future communication or community feature, in accordance with Section 12</li>
+      <li>You will not treat anything said in Founder's Chat as medical, clinical, or therapeutic advice</li>
+      <li>You will not post or share content that is sexually explicit, promotes pornography, or otherwise breaches the content standards in Section 12.9</li>
       <li>You will not use the app if you are in a mental health crisis — contact a qualified mental health professional immediately in such situations</li>
     </ul>
   </div>
@@ -282,8 +351,9 @@
       <li>Any indirect, incidental, special, consequential, or punitive damages from use of the app</li>
       <li>Any loss of data, streaks, or programme history due to technical failures or subscription lapse</li>
       <li>Any physical, psychological, or emotional outcomes resulting from following the programme</li>
-      <li>Any third-party actions, including payment processing errors by Google Play, Apple App Store, RevenueCat, or Descope</li>
-      <li>Any interruption, suspension, or discontinuation of the app or its features</li>
+      <li>Any third-party actions, including payment processing errors by Google Play, RevenueCat, Descope, or our hosting providers</li>
+      <li>Any interruption, suspension, or discontinuation of the app or its features, including Founder's Chat</li>
+      <li>Any decision you take, or refrain from taking, in reliance on anything communicated through Founder's Chat</li>
     </ul>
 
     <h3>10.3 Maximum Liability</h3>
@@ -301,9 +371,111 @@
 
   <!-- 12 -->
   <div class="section">
-    <h2>12. Community Features</h2>
-    <p>A community forum feature is planned for a future phase of Overcome and is not available at the time these Terms of Service take effect.</p>
-    <p>When introduced, community features will be subject to additional guidelines and moderation terms communicated before those features go live. Participation will be subject to those additional terms alongside this Agreement.</p>
+    <h2>12. Community and Communication Features</h2>
+
+    <p>In this Section, <strong>"founding team"</strong> means the co-founders of Overcome and any person they formally authorise to operate a communication feature on their behalf. Where a feature is operated by anyone outside the co-founders, this Agreement and the Privacy Policy will be updated to say so before that feature becomes available to you.</p>
+
+    <h3>12.1 Founder's Chat</h3>
+    <p>Founder's Chat is a private text messaging channel between you and the Overcome founding team.</p>
+    <ul>
+      <li>It is a conversation between you and the founding team only. It is <strong>not</strong> a channel between you and another user, and no other user takes part in it.</li>
+      <li>The only people who can read your conversation are <strong>you and the founding team</strong>. Your messages are not visible to other users, are not published anywhere in the app, and are not shared outside Overcome except as set out in the Privacy Policy.</li>
+      <li>Founder's Chat currently supports text messages only.</li>
+    </ul>
+
+    <h3>12.2 Founder's Chat Is Not Medical Advice</h3>
+    <div class="callout warning">
+      The founding team are not licensed therapists, counsellors, psychiatrists, or medical practitioners. What we send you in Founder's Chat is personal experience — approaches that worked for us — together with encouragement and motivation. <strong>Nothing we say in Founder's Chat is medical advice, psychological treatment, diagnosis, or a clinical recommendation, and none of it may be treated or relied upon as such.</strong> What worked for us may not work for you, and may not be appropriate for your circumstances.
+    </div>
+    <p>Founder's Chat is not monitored continuously, is not staffed around the clock, and is not an emergency or crisis service. If you are experiencing a mental health crisis, or are thinking about harming yourself, do not use Founder's Chat — contact a qualified mental health professional or your local emergency services immediately.</p>
+    <p>The medical disclaimer in Section 9 applies in full to Founder's Chat and to every message sent through it. If anything we say leads you to consider changing, delaying, or stopping professional care you are receiving, speak to your healthcare provider first.</p>
+
+    <h3>12.3 Availability and Response Times</h3>
+    <ul>
+      <li>Founder's Chat is offered on a best-effort basis. We do not guarantee a response to any particular message, or a response within any particular timeframe.</li>
+      <li>We aim to reply within 5 business days, but this is a target and not a contractual commitment.</li>
+      <li>We may pause, rate-limit, restrict, or discontinue Founder's Chat at any time in accordance with Section 11.</li>
+      <li>Founder's Chat is not a guaranteed component of subscription value. Its unavailability, in whole or in part, does not entitle you to a refund, a cashback claim, or any credit.</li>
+    </ul>
+
+    <h3>12.4 Acceptable Use of Founder's Chat</h3>
+    <p>When using Founder's Chat, you will not send:</p>
+    <ul>
+      <li>Harassing, abusive, threatening, hateful, or discriminatory messages</li>
+      <li>Sexually explicit material, nudity, or content promoting pornography</li>
+      <li>Content promoting or soliciting casual sexual encounters, or the use of illegal drugs</li>
+      <li>Spam, advertising, promotional content, or solicitation of any kind</li>
+      <li>Content that is unlawful, defamatory, or infringes the rights of others</li>
+      <li>Personal information belonging to another individual</li>
+      <li>Messages sent by automated means, or at a volume intended to disrupt the service</li>
+      <li>Content impersonating any person or entity</li>
+    </ul>
+    <p>Section 7 applies to Founder's Chat in full. We may restrict or withdraw your access to Founder's Chat, with or without notice, where we consider use of it abusive, disruptive, or in breach of these Terms. Withdrawal of Founder's Chat access alone does not terminate your subscription and does not entitle you to a refund.</p>
+
+    <h3>12.5 Founder's Chat Is Not a Channel of Record</h3>
+    <p>Founder's Chat is a support and encouragement channel only. It cannot be used to submit, substantiate, or preserve:</p>
+    <ul>
+      <li>Cashback Guarantee claims — these must follow the email process in Section 5.5</li>
+      <li>Account deletion or data rights requests — these must follow the email process in Section 13.1 and Privacy Policy Section 5.3</li>
+      <li>Formal disputes, grievances, or complaints — these must follow Section 15.2</li>
+    </ul>
+    <div class="callout warning">
+      A message sent through Founder's Chat about any of the matters above is not a valid submission. It does not start, pause, extend, or stop any deadline, claim window, or response period under these Terms. In particular, raising a cashback claim in Founder's Chat will not preserve your 14-day claim window under Section 5.6.
+    </div>
+
+    <h3>12.6 No Variation of These Terms</h3>
+    <p>Statements made by the founding team in Founder's Chat are informal and do not amend, waive, or override these Terms. No commitment concerning pricing, refunds, cashback eligibility, guarantee qualification, feature availability, or account status is binding on Overcome unless confirmed in writing by email from <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a>. A failure to enforce any provision of these Terms in the course of a chat conversation is not a waiver of that provision.</p>
+
+    <h3>12.7 Your Messages and Feedback</h3>
+    <p>You retain ownership of the content you write. You grant Overcome a non-exclusive, royalty-free licence to store, read, and use your messages for the limited purposes of responding to you, operating and improving the app, and enforcing these Terms.</p>
+    <p>We will not publish, quote, or reproduce your messages in marketing materials, testimonials, case studies, social media, or any public-facing content without your separate, explicit, prior written consent. Where you give that consent, we will anonymise the content unless you agree otherwise in writing.</p>
+    <p>If you send us a suggestion, feature idea, or other feedback, you agree we may use it without restriction, obligation, or compensation to you. This does not give us any rights over content you own that is unrelated to Overcome.</p>
+    <p>You are responsible for what you choose to disclose. Do not send payment credentials, passwords, government identifiers, another person's personal information, or clinical records through Founder's Chat.</p>
+    <p>Storage, retention, and deletion of Founder's Chat messages are governed by Sections 2.5, 3, and 5.3 of the Privacy Policy.</p>
+
+    <h3>12.8 Recovery Mentor Chat (Planned — Not Yet Available)</h3>
+    <div class="callout">
+      Recovery Mentor Chat is a planned feature and is <strong>not available</strong> at the time these Terms take effect. The terms below are published in advance so you know what to expect. They take effect only when the feature launches, and we will give notice under Section 14 before that happens.
+    </div>
+    <p>When introduced, Recovery Mentor Chat will operate on the same private basis as Founder's Chat:</p>
+    <ul>
+      <li>It will be a conversation between you and a Recovery Mentor made available through Overcome. It will not be a channel between you and another user.</li>
+      <li>The only people able to read the conversation will be you and the Recovery Mentor assigned to you, together with the founding team to the extent necessary to operate the service, investigate abuse, or comply with law.</li>
+      <li>It is expected to run on a scheduled basis of approximately one session per week, and to support text, audio, and image messages.</li>
+    </ul>
+    <div class="callout warning">
+      <strong>A Recovery Mentor is not a clinician.</strong> Recovery Mentors are trained peer supporters. Some may hold academic qualifications in psychology or a related field, but they are not registered with the Rehabilitation Council of India, are not licensed mental health professionals under the Mental Healthcare Act 2017, and do not practise as clinicians through Overcome. Nothing said in Recovery Mentor Chat will constitute medical advice, diagnosis, prescription, psychological treatment, or a clinical recommendation. It will not be a substitute for care from a qualified healthcare professional, and it will not be an appropriate channel in a crisis. Section 9 and Section 12.2 will apply to Recovery Mentor Chat in full.
+    </div>
+    <p>Where we describe a Recovery Mentor's background or qualifications in the app, we will do so accurately and will not imply a clinical licence or professional registration that the person does not hold.</p>
+    <p>A Recovery Mentor is a separate person from the founding team and will be bound by a written confidentiality obligation before being given access to any user conversation. Before launch, we will publish additional terms covering scheduling, session cadence, missed and rescheduled sessions, the mentor's role and limits, confidentiality, escalation where a user appears to be at risk, cost, and what happens if the feature is unavailable. We will also update the Privacy Policy to record that a Recovery Mentor will have access to your messages, and to describe the media types collected. Participation will be subject to those additional terms alongside this Agreement.</p>
+
+    <h3>12.9 Community Forum (Planned — Not Yet Available)</h3>
+    <div class="callout">
+      The Community Forum is a planned feature and is <strong>not available</strong> at the time these Terms take effect. The content standards below are published in advance. They take effect only when the feature launches, and we will give notice under Section 14 before that happens.
+    </div>
+    <p>When introduced, the Community Forum will allow you to publish text and image posts that <strong>other users can view, comment on, and discuss</strong>. Unlike Founder's Chat and Counsellor Chat, the Forum is <strong>not private</strong>.</p>
+    <div class="callout warning">
+      Anything you post in the Forum will be visible to other users of Overcome under your display name. Do not post anything you are not willing for other people to see, and remember that your display name does not need to be your real name. Once content has been seen, commented on, or copied by another user, we cannot undo that, even if you later delete the post.
+    </div>
+    <p><strong>Content standards.</strong> All Forum content must be suitable for a general audience and comply with these standards. You may not post, link to, or otherwise share:</p>
+    <ul>
+      <li>Content that is sexually explicit, pornographic, or otherwise not safe for work</li>
+      <li>Nudity, whether photographic, illustrated, or generated</li>
+      <li>Content that promotes, endorses, advertises, or directs others toward pornography or adult content of any kind</li>
+      <li>Content that promotes casual sexual relationships or encounters</li>
+      <li>Content that promotes, glamorises, or facilitates the use or supply of illegal drugs</li>
+      <li>Promotion, advertising, affiliate links, referral codes, or solicitation of any product, service, or platform</li>
+      <li>Harassment, abuse, threats, hate speech, or content that demeans any person or group</li>
+      <li>Content that is unlawful, defamatory, or infringes another person's intellectual property or privacy</li>
+      <li>Another person's personal information, or content that identifies another user without their consent</li>
+      <li>Spam, repetitive posting, or content generated or posted by automated means</li>
+      <li>Content encouraging self-harm, suicide, or disordered eating</li>
+      <li>Medical, clinical, or treatment advice presented as professional guidance</li>
+    </ul>
+    <p><strong>Moderation.</strong> We may review, edit, restrict, or remove any Forum content at our discretion, with or without notice, and may suspend or withdraw Forum access from any user who breaches these standards. Repeated or serious breaches may result in termination of your account under Section 13.2, without refund. We do not undertake to review every post before it appears, and content posted by other users is their responsibility, not ours.</p>
+    <p><strong>Reporting.</strong> When the Forum launches, we will provide an in-app mechanism to report objectionable content and to block other users. You can also report content to <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with the subject line "Forum Report". We will act on reports of objectionable content within 24 hours of receiving them.</p>
+    <p><strong>Your posts.</strong> You retain ownership of what you post. By posting, you grant Overcome a non-exclusive, royalty-free, worldwide licence to host, store, display, and distribute that content within the app for the purpose of operating the Forum. This licence ends when you delete the post or your account, except for copies retained in backups or where retention is required by law, and except for the fact of other users having already seen it.</p>
+    <p>Before launch, we will publish additional community guidelines and update the Privacy Policy to describe how Forum content is stored, moderated, retained, and deleted. Participation will be subject to those additional terms alongside this Agreement.</p>
   </div>
 
   <!-- 13 -->
@@ -319,10 +491,12 @@
         <li>We will confirm receipt within 48 hours and permanently delete your account within 30 days.</li>
       </ol>
     </div>
-    <p>Alternatively, email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> directly with subject line <strong>"Data Deletion Request"</strong>. Deletion of your account terminates this Agreement. For full details of what is deleted and retained, refer to the Privacy Policy Section 5.3.</p>
+    <p>Alternatively, email <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> directly with subject line <strong>"Data Deletion Request"</strong>. Deletion requests must be made by email; a request made through Founder's Chat is not a valid request — see Section 12.5. Deletion of your account terminates this Agreement. For full details of what is deleted and retained, refer to the Privacy Policy Section 5.3.</p>
 
     <h3>13.2 Termination by Us</h3>
-    <p>We may suspend or terminate your account if you violate these Terms, if we believe your use is fraudulent or harmful, or if required by law. No refund will be issued for termination due to a Terms violation. For termination unrelated to your conduct, a pro-rata refund of your remaining period will be provided where possible.</p>
+    <p>We may suspend or terminate your account if you violate these Terms, if we believe your use is fraudulent or harmful, or if required by law. No refund will be issued for termination due to a Terms violation.</p>
+    <p>Where we terminate your account for a reason unrelated to your conduct — for example because we discontinue the service — we will request a refund of the unused portion of your current subscription period through Google Play. "Unused portion" means the part of the period you paid for that had not yet elapsed on the date of termination.</p>
+    <p>Because all payments are handled by Google Play and we do not hold your money, we can initiate and support that request but cannot guarantee its outcome, timing, or the method by which Google returns the funds. Where Google declines a refund we would otherwise have granted, contact us at <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> and we will work with you to find an alternative resolution.</p>
 
     <h3>13.3 Effect of Termination</h3>
     <p>Upon termination, your licence ends immediately, access is revoked, and your data is handled per our Privacy Policy.</p>
@@ -336,7 +510,8 @@
       <li>You will be notified via in-app notification or email at least 7 days before material changes take effect.</li>
       <li>For changes materially affecting your rights, we will request fresh acceptance.</li>
     </ul>
-    <p>Continued use after changes take effect constitutes acceptance. If you disagree, cancel before changes take effect.</p>
+    <p>Continued use after changes take effect constitutes acceptance.</p>
+    <p><strong>If you do not accept a material change,</strong> you may tell us so by email at <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> before it takes effect. In that case your current subscription period continues to be governed by the version of these Terms you originally accepted, until that period ends. The new Terms will apply from your next renewal, and you may cancel before then. You do not lose your Cashback Guarantee eligibility by refusing a change.</p>
   </div>
 
   <!-- 15 -->
@@ -349,7 +524,8 @@
     <p>Before any formal dispute, contact us at <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> with a written description of your complaint. We will make reasonable efforts to resolve it within 30 days.</p>
 
     <h3>15.3 Jurisdiction</h3>
-    <p>Unresolved disputes are subject to the exclusive jurisdiction of courts in <strong>Bengaluru, Karnataka, India</strong>.</p>
+    <p>Unresolved disputes are subject to the jurisdiction of courts in <strong>Bengaluru, Karnataka, India</strong>.</p>
+    <p>This does not affect your rights under the <strong>Consumer Protection Act 2019</strong>. If you are a consumer, you may bring a complaint before the consumer commission having jurisdiction where you reside or work, and nothing in this Agreement prevents you from doing so.</p>
   </div>
 
   <!-- 16 -->
@@ -365,7 +541,38 @@
     </ul>
   </div>
 
+  <!-- 17 -->
+  <div class="section">
+    <h2>17. General Provisions</h2>
+
+    <h3>17.1 Entire Agreement</h3>
+    <p>These Terms, together with the Privacy Policy and any additional terms published for a specific feature, form the entire agreement between you and Overcome and replace any earlier understanding, representation, or communication on the same subject. Section 12.6 sets out the effect of informal statements made in Founder's Chat.</p>
+
+    <h3>17.2 Severability</h3>
+    <p>If any provision of these Terms is found by a court or competent authority to be invalid, unlawful, or unenforceable, that provision will be modified to the minimum extent necessary to make it enforceable, or if that is not possible, severed. The remaining provisions continue in full force.</p>
+
+    <h3>17.3 No Waiver</h3>
+    <p>If we do not enforce a provision of these Terms, or delay in doing so, that is not a waiver of that provision or of our right to enforce it later.</p>
+
+    <h3>17.4 Assignment and Change of Operator</h3>
+    <p>You may not transfer or assign your account or your rights under these Terms to anyone else.</p>
+    <p>We may transfer or assign this Agreement, in whole or in part, to a successor entity — including a company incorporated by the co-founders to operate Overcome, or an acquirer of the Overcome business — provided that the successor assumes our obligations under these Terms and the Privacy Policy in full.</p>
+    <div class="callout">
+      Overcome is presently operated by its co-founders as individuals. We intend to incorporate a company to operate it. When that happens, this Agreement and the Privacy Policy will transfer to that company on the same terms, your subscription and Cashback Guarantee eligibility will be unaffected, and we will notify you under Section 14. Your data will continue to be processed on the same basis, and the incorporation itself will not change what we collect, how long we keep it, or who can access it.
+    </div>
+
+    <h3>17.5 Force Majeure</h3>
+    <p>We are not liable for any failure or delay in providing Overcome caused by events beyond our reasonable control, including internet or hosting provider failure, failure of Google Play or other third-party services we depend on, power or telecommunications failure, natural disaster, epidemic, civil unrest, war, strike, cyberattack, or government or regulatory action. Where such an event materially affects your ability to complete challenge weeks, we will extend your guarantee period by a corresponding number of days rather than disqualify your claim.</p>
+
+    <h3>17.6 Survival</h3>
+    <p>Sections 8 (Intellectual Property), 9 (Medical Disclaimer), 10 (Limitation of Liability), 12.7 (Your Messages and Feedback), 15 (Governing Law and Dispute Resolution), and this Section 17 survive termination of this Agreement for any reason.</p>
+
+    <h3>17.7 Language</h3>
+    <p>These Terms are published in English. Where we provide a translation, the English version prevails in the event of any inconsistency.</p>
+  </div>
+
   <div class="doc-footer">
+    <a class="back-link" href="index.html">&#8592; Back to all legal documents</a><br>
     Overcome: Dopamine Reset for Men &nbsp;|&nbsp;
     <a href="mailto:overcomeapp0@gmail.com">overcomeapp0@gmail.com</a> &nbsp;|&nbsp;
     Bengaluru, Karnataka, India &nbsp;|&nbsp;

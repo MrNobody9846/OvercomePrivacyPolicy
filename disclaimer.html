@@ -39,6 +39,32 @@
     }
     .checkbox-container {
       margin-top: 30px;
+      padding: 16px;
+      background: #f5f5f5;
+      border-radius: 8px;
+    }
+    .crisis {
+      background: #FFF4F4;
+      border: 1px solid #C0392B;
+      border-left-width: 4px;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 20px 0;
+    }
+    .crisis strong { color: #C0392B; }
+    .crisis .num {
+      font-size: 20px;
+      font-weight: bold;
+      color: #C0392B;
+      display: block;
+      margin: 8px 0 4px;
+    }
+    .doc-version {
+      font-size: 12px;
+      color: #888;
+      margin-top: 24px;
+      padding-top: 12px;
+      border-top: 1px solid #e0e0e0;
     }
     .button {
       margin-top: 16px;
@@ -82,6 +108,7 @@
       letter-spacing: 0.02em;
     }
     .site-nav a.brand:hover { color: #e0e0e0; }
+    .site-nav li a.current { color: #fff; font-weight: 600; }
     .site-nav ul {
       list-style: none;
       margin: 0;
@@ -101,11 +128,13 @@
 <body>
   <nav class="site-nav" aria-label="Main">
     <div class="site-nav-inner">
-      <a class="brand" href="index.html">Overcome</a>
+      <a class="brand" href="index.html">&#8592; Overcome Legal</a>
       <ul>
-        <li><a href="privacy_policy.html">Privacy Policy</a></li>
-        <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+          <li><a href="overcome_terms_of_service_html.html">Terms of Service</a></li>
+          <li><a href="overcome_refund_policy.html">Refund Policy</a></li>
+          <li><a href="overcome_delete_account.html">Delete Account</a></li>
+          <li><a href="disclaimer.html" class="current">Disclaimer</a></li>
       </ul>
     </div>
   </nav>
@@ -140,7 +169,10 @@
       <div class="card">
         <strong>What Overcome is not:</strong>
         <p>
-          A medical service, therapy platform, or clinical treatment of any kind. Nothing in this app constitutes medical advice. We do not diagnose, treat, cure, or prevent any condition or disorder.
+          A medical service, therapy platform, or clinical treatment of any kind. We do not diagnose, treat, cure, or prevent any condition or disorder.
+        </p>
+        <p>
+          <strong>This includes anything we say to you directly.</strong> In Founder's Chat, what we send you is our own personal experience, encouragement, and motivation — approaches that worked for us. It is never medical advice, and what worked for us may not work for you. We are not therapists, counsellors, psychiatrists, or medical practitioners.
         </p>
       </div>
     </div>
@@ -149,6 +181,15 @@
       <p>
         <strong>If you're going through something serious</strong> — depression, anxiety, or anything that feels bigger than a habit — please speak with a qualified mental health professional. Don't rely on an app when you need real support.
       </p>
+
+      <div class="crisis">
+        <strong>If you're in crisis, or thinking about harming yourself, please reach out now.</strong>
+        <span class="num">Tele-MANAS — 14416</span>
+        Also reachable on 1-800-891-4416. Free, confidential, available 24 hours a day, in English and 20 Indian languages. It is a Government of India service run through the National Institute of Mental Health and Neurosciences.
+        <p style="margin-top:10px; margin-bottom:0;">
+          Overcome is not a crisis service. Founder's Chat is not monitored around the clock and is not a substitute for the number above. If you are in immediate danger, contact your local emergency services.
+        </p>
+      </div>
     </div>
 
     <div class="section">
@@ -160,19 +201,25 @@
 
     <div class="section">
       <p>
+        <strong>You must be 18 or older</strong> to use Overcome. By continuing, you confirm that you are.
+      </p>
+      <p>
         <strong>Your data and your rights:</strong><br/>
-        By continuing, you agree to our 
-        <a href="#tos-url">Terms of Service</a> and 
-        <a href="#privacy-url">Privacy Policy</a>.
-        Both are written in plain English and worth reading.
+        By continuing, you agree to our
+        <a href="overcome_terms_of_service_html.html">Terms of Service</a> and
+        <a href="privacy_policy.html">Privacy Policy</a>.
+        Both are written in plain English and worth reading. You can also read the
+        <a href="overcome_refund_policy.html">Refund Policy</a> and find out
+        <a href="overcome_delete_account.html">how to delete your account and data</a> at any time.
       </p>
     </div>
 
     <div class="checkbox-container">
       <label>
         <input type="checkbox" id="ackCheckbox" />
-        I have read and understood this. I know Overcome is a habit-building
-        tool, not a medical service or therapy platform.
+        I have read and understood this. I am 18 or older. I know Overcome is a
+        habit-building tool, not a medical service or therapy platform, and that
+        nothing anyone at Overcome tells me is medical advice.
       </label>
 
       <button class="button" id="continueBtn" disabled>
@@ -180,7 +227,32 @@
       </button>
     </div>
 
+    <p style="margin-top:24px;"><a href="index.html">&#8592; Back to all legal documents</a></p>
+
+    <div class="doc-version">
+      Disclaimer version 2.0 &nbsp;&middot;&nbsp; 24 August 2026 &nbsp;&middot;&nbsp;
+      Overcome is currently available on Android via Google Play.
+    </div>
+
   </div>
+
+<!-- ============================================================
+     NOTE ON THIS PAGE AS A CONSENT RECORD
+
+     The checkbox and button below are presentational only. Nothing
+     is recorded when a user ticks and continues, so this page cannot
+     currently evidence that any particular user accepted any
+     particular version of the Terms.
+
+     If this acknowledgement is being relied on as acceptance, the
+     in-app equivalent should store, server-side and per user:
+       - the user id
+       - the version string above ("2.0")
+       - a UTC timestamp of the tick
+     Terms of Service Section 14 gives users the right to stay on the
+     version they accepted when they refuse a material change, which
+     only works if the accepted version was recorded.
+     ============================================================ -->
 
   <script>
     const checkbox = document.getElementById('ackCheckbox');
